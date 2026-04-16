@@ -11,7 +11,7 @@ namespace dominio
         public int id { get; set; }
         public int codigo { get; set; }
         public int nombre { get; set; }
-        public int description { get; set; }
+        public int descripcion { get; set; }
         public decimal precio { get; set; }
 
     }
