@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,13 @@ namespace TPWinForm_equipo_2A
         {
             FormAgregarCat formAgregarCat = new FormAgregarCat();
             formAgregarCat.ShowDialog();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/juancalvo864/tp-winform-equipo2A.git";
+
+            Process.Start(url);
         }
     }
 }
