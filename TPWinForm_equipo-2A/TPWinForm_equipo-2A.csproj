@@ -93,6 +93,24 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarArt.resx">
+      <DependentUpon>FormAgregarArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarCat.resx">
+      <DependentUpon>FormAgregarCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarMarca.resx">
+      <DependentUpon>FormAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoArt.resx">
+      <DependentUpon>FormListadoArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoCat.resx">
+      <DependentUpon>FormListadoCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoMarcas.resx">
+      <DependentUpon>FormListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

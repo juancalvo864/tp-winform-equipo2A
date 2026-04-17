@@ -156,8 +156,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MS1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MS1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
