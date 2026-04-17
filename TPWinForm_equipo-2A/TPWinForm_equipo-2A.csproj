@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -52,8 +52,65 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarArt.Designer.cs">
+      <DependentUpon>FormAgregarArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarCat.Designer.cs">
+      <DependentUpon>FormAgregarCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarMarca.Designer.cs">
+      <DependentUpon>FormAgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoArt.Designer.cs">
+      <DependentUpon>FormListadoArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoCat.Designer.cs">
+      <DependentUpon>FormListadoCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoMarcas.Designer.cs">
+      <DependentUpon>FormListadoMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarArt.resx">
+      <DependentUpon>FormAgregarArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarCat.resx">
+      <DependentUpon>FormAgregarCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarMarca.resx">
+      <DependentUpon>FormAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoArt.resx">
+      <DependentUpon>FormListadoArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoCat.resx">
+      <DependentUpon>FormListadoCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoMarcas.resx">
+      <DependentUpon>FormListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
