@@ -47,5 +47,23 @@ namespace TPWinForm_equipo_2A
 
             Process.Start(url);
         }
+
+        private void verListadoDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListadoArt formListadoArt = new FormListadoArt();
+            formListadoArt.ShowDialog();
+        }
+
+        private void verListadoDeMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListadoMarcas formListadoMarcas = new FormListadoMarcas();
+            formListadoMarcas.ShowDialog();
+        }
+
+        private void verListadoDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListadoCat formListadoCat = new FormListadoCat();
+            formListadoCat.ShowDialog();
+        }
     }
 }

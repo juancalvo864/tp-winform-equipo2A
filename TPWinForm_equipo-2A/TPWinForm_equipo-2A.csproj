@@ -70,6 +70,24 @@
     <Compile Include="FormAgregarMarca.Designer.cs">
       <DependentUpon>FormAgregarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListadoArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoArt.Designer.cs">
+      <DependentUpon>FormListadoArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoCat.Designer.cs">
+      <DependentUpon>FormListadoCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoMarcas.Designer.cs">
+      <DependentUpon>FormListadoMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
