@@ -12,7 +12,10 @@ namespace dominio
         public int codigo { get; set; }
         public int nombre { get; set; }
         public int descripcion { get; set; }
+        public Marca marca { get; set; }
+        public Categoria categoria { get; set; }
         public decimal precio { get; set; }
+        public Imagen imagen { get; set; }
 
     }
 }
