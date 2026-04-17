@@ -21,5 +21,23 @@ namespace TPWinForm_equipo_2A
         {
 
         }
+
+        private void agregarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregarArt formAgregarArt = new FormAgregarArt();
+            formAgregarArt.ShowDialog();
+        }
+
+        private void agregaMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
+            formAgregarMarca.ShowDialog();
+        }
+
+        private void agregarCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregarCat formAgregarCat = new FormAgregarCat();
+            formAgregarCat.ShowDialog();
+        }
     }
 }
