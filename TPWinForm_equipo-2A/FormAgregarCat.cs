@@ -16,5 +16,10 @@ namespace TPWinForm_equipo_2A
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
