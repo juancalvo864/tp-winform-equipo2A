@@ -31,11 +31,11 @@ namespace negocio
 
                     return listaCategoria; 
 			}
-			catch (Exception ex)
-			{
-				throw ex;
-			}
-			finally
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
 			{
 				datos.cerrarConexion();	
             }
