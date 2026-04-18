@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace TPWinForm_equipo_2A
         public FormListadoMarcas()
         {
             InitializeComponent();
+        }
+
+        private void FormListadoMarcas_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();  
+            dgvMarcas.DataSource = negocio.Listar();    
+
         }
     }
 }
