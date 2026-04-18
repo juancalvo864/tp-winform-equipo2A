@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace TPWinForm_equipo_2A
         public FormListadoCat()
         {
             InitializeComponent();
+        }
+
+        private void FormListadoCat_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            dgvCategorias.DataSource = negocio.Listar();
+            dgvCategorias.Columns["Id"].Visible = false;
+
         }
     }
 }
