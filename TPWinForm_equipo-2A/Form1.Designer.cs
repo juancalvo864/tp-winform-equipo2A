@@ -52,7 +52,7 @@
             this.aboutToolStripMenuItem});
             this.MS1.Location = new System.Drawing.Point(0, 0);
             this.MS1.Name = "MS1";
-            this.MS1.Size = new System.Drawing.Size(975, 24);
+            this.MS1.Size = new System.Drawing.Size(1075, 24);
             this.MS1.TabIndex = 1;
             this.MS1.Text = "menuStrip1";
             // 
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 480);
+            this.ClientSize = new System.Drawing.Size(1075, 580);
             this.Controls.Add(this.MS1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

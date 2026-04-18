@@ -83,6 +83,8 @@
             // picbArticulos
             // 
             this.picbArticulos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picbArticulos.ErrorImage = null;
+            this.picbArticulos.InitialImage = null;
             this.picbArticulos.Location = new System.Drawing.Point(376, 31);
             this.picbArticulos.Name = "picbArticulos";
             this.picbArticulos.Size = new System.Drawing.Size(300, 235);
