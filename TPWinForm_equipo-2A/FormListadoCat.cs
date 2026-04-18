@@ -16,5 +16,16 @@ namespace TPWinForm_equipo_2A
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregarCat formAgregarCat = new FormAgregarCat();
+            formAgregarCat.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

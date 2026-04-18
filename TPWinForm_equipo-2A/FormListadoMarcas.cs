@@ -16,5 +16,16 @@ namespace TPWinForm_equipo_2A
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
+            formAgregarMarca.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

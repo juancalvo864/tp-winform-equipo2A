@@ -21,5 +21,17 @@ namespace TPWinForm_equipo_2A
         {
             Close();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregarArt formAgregarArt = new FormAgregarArt();
+            formAgregarArt.ShowDialog();
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            FormDetalleArt formDetalles = new FormDetalleArt();
+            formDetalles.ShowDialog();
+        }
     }
 }
