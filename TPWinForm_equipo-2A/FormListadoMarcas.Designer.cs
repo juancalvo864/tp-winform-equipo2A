@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,21 @@
             this.dgvMarcas.Size = new System.Drawing.Size(880, 500);
             this.dgvMarcas.TabIndex = 0;
             // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.Location = new System.Drawing.Point(12, 629);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(147, 51);
+            this.btnAgregarMarca.TabIndex = 3;
+            this.btnAgregarMarca.Text = "Agregar";
+            this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            // 
             // FormListadoMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -64,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.Button btnAgregarMarca;
     }
 }

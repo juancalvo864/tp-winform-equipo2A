@@ -25,5 +25,10 @@ namespace TPWinForm_equipo_2A
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Imagen"].Visible = false; 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

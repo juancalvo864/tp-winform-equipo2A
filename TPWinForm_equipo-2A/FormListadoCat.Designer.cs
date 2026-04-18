@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,21 @@
             this.dgvCategorias.Size = new System.Drawing.Size(1106, 500);
             this.dgvCategorias.TabIndex = 0;
             // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(24, 613);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(147, 51);
+            this.btnAgregarCategoria.TabIndex = 2;
+            this.btnAgregarCategoria.Text = "Agregar";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            // 
             // FormListadoCat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.dgvCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -64,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.Button btnAgregarCategoria;
     }
 }

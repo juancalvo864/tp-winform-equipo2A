@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,11 +43,22 @@
             this.dgvArticulos.Size = new System.Drawing.Size(1138, 571);
             this.dgvArticulos.TabIndex = 0;
             // 
+            // btnAgregarArticulo
+            // 
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(27, 629);
+            this.btnAgregarArticulo.Name = "btnAgregarArticulo";
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(147, 51);
+            this.btnAgregarArticulo.TabIndex = 1;
+            this.btnAgregarArticulo.Text = "Agregar";
+            this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormListadoArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -64,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.Button btnAgregarArticulo;
     }
 }
