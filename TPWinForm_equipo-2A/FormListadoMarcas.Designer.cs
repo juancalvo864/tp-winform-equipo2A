@@ -39,8 +39,8 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -65,7 +65,7 @@
             this.lblCriterioMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriterioMarca.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioMarca.Name = "lblCriterioMarca";
-            this.lblCriterioMarca.Size = new System.Drawing.Size(61, 16);
+            this.lblCriterioMarca.Size = new System.Drawing.Size(89, 25);
             this.lblCriterioMarca.TabIndex = 58;
             this.lblCriterioMarca.Text = "Criterio:";
             // 
@@ -75,7 +75,7 @@
             this.lblCampoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoMarca.Location = new System.Drawing.Point(11, 327);
             this.lblCampoMarca.Name = "lblCampoMarca";
-            this.lblCampoMarca.Size = new System.Drawing.Size(60, 16);
+            this.lblCampoMarca.Size = new System.Drawing.Size(88, 25);
             this.lblCampoMarca.TabIndex = 57;
             this.lblCampoMarca.Text = "Campo:";
             // 
@@ -98,7 +98,7 @@
             // 
             this.txtFiltrarMarca.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarMarca.Name = "txtFiltrarMarca";
-            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 26);
             this.txtFiltrarMarca.TabIndex = 55;
             // 
             // cbCriterioMarca
@@ -107,7 +107,7 @@
             this.cbCriterioMarca.FormattingEnabled = true;
             this.cbCriterioMarca.Location = new System.Drawing.Point(118, 346);
             this.cbCriterioMarca.Name = "cbCriterioMarca";
-            this.cbCriterioMarca.Size = new System.Drawing.Size(97, 21);
+            this.cbCriterioMarca.Size = new System.Drawing.Size(97, 28);
             this.cbCriterioMarca.TabIndex = 54;
             // 
             // cbCampoMarca
@@ -116,7 +116,7 @@
             this.cbCampoMarca.FormattingEnabled = true;
             this.cbCampoMarca.Location = new System.Drawing.Point(11, 346);
             this.cbCampoMarca.Name = "cbCampoMarca";
-            this.cbCampoMarca.Size = new System.Drawing.Size(94, 21);
+            this.cbCampoMarca.Size = new System.Drawing.Size(94, 28);
             this.cbCampoMarca.TabIndex = 53;
             // 
             // btnRefrescar
@@ -180,21 +180,21 @@
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvMarcas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(204, 299);
-            this.dataGridView1.TabIndex = 48;
+            this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(11, 12);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.ReadOnly = true;
+            this.dgvMarcas.RowHeadersWidth = 62;
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcas.Size = new System.Drawing.Size(204, 299);
+            this.dgvMarcas.TabIndex = 48;
             // 
             // FormListadoMarcas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(375, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCriterioMarca);
@@ -207,7 +207,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMarcas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -215,7 +215,8 @@
             this.Name = "FormListadoMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de marcas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormListadoMarcas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +235,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }

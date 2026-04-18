@@ -34,5 +34,13 @@ namespace TPWinForm_equipo_2A
             FormDetalleArt formDetalles = new FormDetalleArt();
             formDetalles.ShowDialog();
         }
+
+        private void FormListadoArt_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();    
+            dgvArticulos.DataSource = negocio.Listar(); 
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Imagen"].Visible = false;
+        }
     }
 }

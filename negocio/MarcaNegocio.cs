@@ -42,5 +42,22 @@ namespace negocio
         }
 
 
-    }
+        public void Agregar(Marca nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+
+        }
+}
 }

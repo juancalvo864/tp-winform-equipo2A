@@ -38,9 +38,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCriterioCategoria
@@ -49,7 +49,7 @@
             this.lblCriterioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriterioCategoria.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioCategoria.Name = "lblCriterioCategoria";
-            this.lblCriterioCategoria.Size = new System.Drawing.Size(61, 16);
+            this.lblCriterioCategoria.Size = new System.Drawing.Size(89, 25);
             this.lblCriterioCategoria.TabIndex = 46;
             this.lblCriterioCategoria.Text = "Criterio:";
             // 
@@ -59,7 +59,7 @@
             this.lblCampoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoCategoria.Location = new System.Drawing.Point(11, 327);
             this.lblCampoCategoria.Name = "lblCampoCategoria";
-            this.lblCampoCategoria.Size = new System.Drawing.Size(60, 16);
+            this.lblCampoCategoria.Size = new System.Drawing.Size(88, 25);
             this.lblCampoCategoria.TabIndex = 45;
             this.lblCampoCategoria.Text = "Campo:";
             // 
@@ -82,7 +82,7 @@
             // 
             this.txtFiltrarCat.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarCat.Name = "txtFiltrarCat";
-            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 26);
             this.txtFiltrarCat.TabIndex = 43;
             // 
             // cbCriterioCat
@@ -91,7 +91,7 @@
             this.cbCriterioCat.FormattingEnabled = true;
             this.cbCriterioCat.Location = new System.Drawing.Point(118, 346);
             this.cbCriterioCat.Name = "cbCriterioCat";
-            this.cbCriterioCat.Size = new System.Drawing.Size(97, 21);
+            this.cbCriterioCat.Size = new System.Drawing.Size(97, 28);
             this.cbCriterioCat.TabIndex = 42;
             // 
             // cbCampoCat
@@ -100,7 +100,7 @@
             this.cbCampoCat.FormattingEnabled = true;
             this.cbCampoCat.Location = new System.Drawing.Point(11, 346);
             this.cbCampoCat.Name = "cbCampoCat";
-            this.cbCampoCat.Size = new System.Drawing.Size(94, 21);
+            this.cbCampoCat.Size = new System.Drawing.Size(94, 28);
             this.cbCampoCat.TabIndex = 41;
             // 
             // btnRefrescar
@@ -164,16 +164,17 @@
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvCategorias
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(204, 299);
-            this.dataGridView1.TabIndex = 35;
+            this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(11, 12);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.ReadOnly = true;
+            this.dgvCategorias.RowHeadersWidth = 62;
+            this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCategorias.Size = new System.Drawing.Size(204, 299);
+            this.dgvCategorias.TabIndex = 35;
             // 
             // btnSalir
             // 
@@ -193,8 +194,7 @@
             // 
             // FormListadoCat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(375, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCriterioCategoria);
@@ -207,7 +207,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -215,7 +215,8 @@
             this.Name = "FormListadoCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de categorías";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormListadoCat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +234,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Button btnSalir;
     }
 }

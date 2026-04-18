@@ -44,10 +44,10 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbArtiuclos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrev
@@ -86,7 +86,7 @@
             this.lblErrorBusqueda.ForeColor = System.Drawing.Color.Red;
             this.lblErrorBusqueda.Location = new System.Drawing.Point(3, 412);
             this.lblErrorBusqueda.Name = "lblErrorBusqueda";
-            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 16);
+            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 25);
             this.lblErrorBusqueda.TabIndex = 38;
             // 
             // label2
@@ -95,7 +95,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(150, 354);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 37;
             this.label2.Text = "Criterio:";
             // 
@@ -105,7 +105,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 354);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 36;
             this.label1.Text = "Campo:";
             // 
@@ -116,7 +116,7 @@
             this.lblERROR.ForeColor = System.Drawing.Color.Red;
             this.lblERROR.Location = new System.Drawing.Point(3, 412);
             this.lblERROR.Name = "lblERROR";
-            this.lblERROR.Size = new System.Drawing.Size(0, 16);
+            this.lblERROR.Size = new System.Drawing.Size(0, 25);
             this.lblERROR.TabIndex = 35;
             // 
             // btnFiltrar
@@ -138,7 +138,7 @@
             // 
             this.txtFiltro.Location = new System.Drawing.Point(294, 374);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(276, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(276, 26);
             this.txtFiltro.TabIndex = 33;
             // 
             // cbCriterio
@@ -147,7 +147,7 @@
             this.cbCriterio.FormattingEnabled = true;
             this.cbCriterio.Location = new System.Drawing.Point(153, 373);
             this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cbCriterio.Size = new System.Drawing.Size(121, 28);
             this.cbCriterio.TabIndex = 32;
             // 
             // cbCampo
@@ -156,7 +156,7 @@
             this.cbCampo.FormattingEnabled = true;
             this.cbCampo.Location = new System.Drawing.Point(13, 373);
             this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(121, 21);
+            this.cbCampo.Size = new System.Drawing.Size(121, 28);
             this.cbCampo.TabIndex = 31;
             // 
             // picbArtiuclos
@@ -248,16 +248,17 @@
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvArticulos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(699, 299);
-            this.dataGridView1.TabIndex = 23;
+            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 40);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.RowHeadersWidth = 62;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(699, 299);
+            this.dgvArticulos.TabIndex = 23;
             // 
             // btnSalir
             // 
@@ -277,8 +278,7 @@
             // 
             // FormListadoArt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(991, 408);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPrev);
@@ -297,7 +297,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -305,8 +305,9 @@
             this.Name = "FormListadoArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de artículos";
+            this.Load += new System.EventHandler(this.FormListadoArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbArtiuclos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +331,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Button btnSalir;
     }
 }
