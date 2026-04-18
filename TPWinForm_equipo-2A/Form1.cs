@@ -65,11 +65,5 @@ namespace TPWinForm_equipo_2A
             FormListadoCat formListadoCat = new FormListadoCat();
             formListadoCat.ShowDialog();
         }
-
-        private void buscarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormBusqueda formBusqueda = new FormBusqueda();
-            formBusqueda.ShowDialog();
-        }
     }
 }

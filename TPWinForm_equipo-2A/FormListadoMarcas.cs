@@ -18,15 +18,13 @@ namespace TPWinForm_equipo_2A
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void FormListadoMarcas_Load(object sender, EventArgs e)
         {
-            FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
-            formAgregarMarca.ShowDialog();
-        }
+            MarcaNegocio negocio = new MarcaNegocio();  
+            dgvMarcas.DataSource = negocio.Listar();
+            dgvMarcas.Columns["Id"].Visible = false;
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
+
         }
     }
 }

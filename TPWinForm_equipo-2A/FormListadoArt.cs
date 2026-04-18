@@ -18,21 +18,17 @@ namespace TPWinForm_equipo_2A
             InitializeComponent();
         }
 
+        private void FormListadoArt_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.Listar();
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Imagen"].Visible = false; 
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
-        }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            FormAgregarArt formAgregarArt = new FormAgregarArt();
-            formAgregarArt.ShowDialog();
-        }
-
-        private void btnDetalles_Click(object sender, EventArgs e)
-        {
-            FormDetalleArt formDetalles = new FormDetalleArt();
-            formDetalles.ShowDialog();
         }
     }
 }
