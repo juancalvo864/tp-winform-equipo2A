@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TPWinForm_equipo_2A
 {
-    public partial class FormAgregarMarca : Form
+    public partial class FormBusqueda : Form
     {
-        public FormAgregarMarca()
+        public FormBusqueda()
         {
             InitializeComponent();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

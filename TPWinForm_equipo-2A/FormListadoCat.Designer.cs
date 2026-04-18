@@ -28,37 +28,186 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.btnAgregarCategoria = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            this.lblCriterioCategoria = new System.Windows.Forms.Label();
+            this.lblCampoCategoria = new System.Windows.Forms.Label();
+            this.btnFiltrarCat = new System.Windows.Forms.Button();
+            this.txtFiltrarCat = new System.Windows.Forms.TextBox();
+            this.cbCriterioCat = new System.Windows.Forms.ComboBox();
+            this.cbCampoCat = new System.Windows.Forms.ComboBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvCategorias
+            // lblCriterioCategoria
             // 
-            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(24, 78);
-            this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.RowHeadersWidth = 62;
-            this.dgvCategorias.RowTemplate.Height = 28;
-            this.dgvCategorias.Size = new System.Drawing.Size(1106, 500);
-            this.dgvCategorias.TabIndex = 0;
+            this.lblCriterioCategoria.AutoSize = true;
+            this.lblCriterioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterioCategoria.Location = new System.Drawing.Point(118, 327);
+            this.lblCriterioCategoria.Name = "lblCriterioCategoria";
+            this.lblCriterioCategoria.Size = new System.Drawing.Size(61, 16);
+            this.lblCriterioCategoria.TabIndex = 46;
+            this.lblCriterioCategoria.Text = "Criterio:";
             // 
-            // btnAgregarCategoria
+            // lblCampoCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(24, 613);
-            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(147, 51);
-            this.btnAgregarCategoria.TabIndex = 2;
-            this.btnAgregarCategoria.Text = "Agregar";
-            this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.lblCampoCategoria.AutoSize = true;
+            this.lblCampoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoCategoria.Location = new System.Drawing.Point(11, 327);
+            this.lblCampoCategoria.Name = "lblCampoCategoria";
+            this.lblCampoCategoria.Size = new System.Drawing.Size(60, 16);
+            this.lblCampoCategoria.TabIndex = 45;
+            this.lblCampoCategoria.Text = "Campo:";
+            // 
+            // btnFiltrarCat
+            // 
+            this.btnFiltrarCat.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFiltrarCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiltrarCat.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFiltrarCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnFiltrarCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrarCat.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrarCat.Location = new System.Drawing.Point(229, 334);
+            this.btnFiltrarCat.Name = "btnFiltrarCat";
+            this.btnFiltrarCat.Size = new System.Drawing.Size(135, 27);
+            this.btnFiltrarCat.TabIndex = 44;
+            this.btnFiltrarCat.Text = "FILTRAR";
+            this.btnFiltrarCat.UseVisualStyleBackColor = false;
+            // 
+            // txtFiltrarCat
+            // 
+            this.txtFiltrarCat.Location = new System.Drawing.Point(11, 376);
+            this.txtFiltrarCat.Name = "txtFiltrarCat";
+            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarCat.TabIndex = 43;
+            // 
+            // cbCriterioCat
+            // 
+            this.cbCriterioCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCriterioCat.FormattingEnabled = true;
+            this.cbCriterioCat.Location = new System.Drawing.Point(118, 346);
+            this.cbCriterioCat.Name = "cbCriterioCat";
+            this.cbCriterioCat.Size = new System.Drawing.Size(97, 21);
+            this.cbCriterioCat.TabIndex = 42;
+            // 
+            // cbCampoCat
+            // 
+            this.cbCampoCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCampoCat.FormattingEnabled = true;
+            this.cbCampoCat.Location = new System.Drawing.Point(11, 346);
+            this.cbCampoCat.Name = "cbCampoCat";
+            this.cbCampoCat.Size = new System.Drawing.Size(94, 21);
+            this.cbCampoCat.TabIndex = 41;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Location = new System.Drawing.Point(229, 126);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(135, 27);
+            this.btnRefrescar.TabIndex = 39;
+            this.btnRefrescar.Text = "REFRESCAR";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(229, 12);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(135, 27);
+            this.btnAgregar.TabIndex = 38;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(229, 88);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(135, 27);
+            this.btnEliminar.TabIndex = 37;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(229, 50);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(135, 27);
+            this.btnEditar.TabIndex = 36;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(204, 299);
+            this.dataGridView1.TabIndex = 35;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(229, 372);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(135, 27);
+            this.btnSalir.TabIndex = 47;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FormListadoCat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.btnAgregarCategoria);
-            this.Controls.Add(this.dgvCategorias);
+            this.ClientSize = new System.Drawing.Size(375, 407);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.lblCriterioCategoria);
+            this.Controls.Add(this.lblCampoCategoria);
+            this.Controls.Add(this.btnFiltrarCat);
+            this.Controls.Add(this.txtFiltrarCat);
+            this.Controls.Add(this.cbCriterioCat);
+            this.Controls.Add(this.cbCampoCat);
+            this.Controls.Add(this.btnRefrescar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -66,15 +215,25 @@
             this.Name = "FormListadoCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de categorías";
-            this.Load += new System.EventHandler(this.FormListadoCat_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvCategorias;
-        private System.Windows.Forms.Button btnAgregarCategoria;
+        private System.Windows.Forms.Label lblCriterioCategoria;
+        private System.Windows.Forms.Label lblCampoCategoria;
+        private System.Windows.Forms.Button btnFiltrarCat;
+        private System.Windows.Forms.TextBox txtFiltrarCat;
+        private System.Windows.Forms.ComboBox cbCriterioCat;
+        private System.Windows.Forms.ComboBox cbCampoCat;
+        private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

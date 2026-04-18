@@ -18,12 +18,15 @@ namespace TPWinForm_equipo_2A
             InitializeComponent();
         }
 
-        private void FormListadoCat_Load(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            CategoriaNegocio negocio = new CategoriaNegocio();
-            dgvCategorias.DataSource = negocio.Listar();
-            dgvCategorias.Columns["Id"].Visible = false;
+            FormAgregarCat formAgregarCat = new FormAgregarCat();
+            formAgregarCat.ShowDialog();
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
