@@ -42,9 +42,10 @@
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(44, 105);
+            this.btnAgregar.Location = new System.Drawing.Point(66, 162);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(112, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 46);
             this.btnAgregar.TabIndex = 52;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(264, 105);
+            this.btnCancelar.Location = new System.Drawing.Point(396, 162);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(112, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(168, 46);
             this.btnCancelar.TabIndex = 53;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -69,31 +71,33 @@
             // 
             this.txtbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbMarca.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtbMarca.Location = new System.Drawing.Point(44, 63);
+            this.txtbMarca.Location = new System.Drawing.Point(66, 97);
+            this.txtbMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbMarca.Name = "txtbMarca";
-            this.txtbMarca.Size = new System.Drawing.Size(332, 20);
+            this.txtbMarca.Size = new System.Drawing.Size(496, 26);
             this.txtbMarca.TabIndex = 51;
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(125, 28);
+            this.lblMarca.Location = new System.Drawing.Point(188, 43);
+            this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(150, 17);
+            this.lblMarca.Size = new System.Drawing.Size(207, 25);
             this.lblMarca.TabIndex = 50;
             this.lblMarca.Text = "Ingresar nueva marca:";
             // 
             // FormAgregarMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 175);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(632, 269);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtbMarca);
             this.Controls.Add(this.lblMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAgregarMarca";

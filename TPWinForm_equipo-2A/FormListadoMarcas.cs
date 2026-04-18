@@ -28,5 +28,12 @@ namespace TPWinForm_equipo_2A
         {
             Close();
         }
+
+        private void FormListadoMarcas_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio(); 
+            dgvMarcas.DataSource = negocio.Listar(); 
+            dgvMarcas.Columns["Id"].Visible = false;    
+        }
     }
 }
