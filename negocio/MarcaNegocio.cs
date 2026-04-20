@@ -31,9 +31,9 @@ namespace negocio
 
                     return listaMarca; 
 			}
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error de lectura en la DB" + ex.Message);
             }
             finally
 			{
@@ -81,6 +81,22 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete FROM MARCAS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }
