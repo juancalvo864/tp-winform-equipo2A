@@ -47,17 +47,19 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                datos.setearConsulta("insert into MARCAS(Descripcion) values(@Descripcion)");
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.ejecutarAccion();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+
+                throw ex;
             }
             finally
             {
                 datos.cerrarConexion();
             }
-
-
         }
 }
 }
