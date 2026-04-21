@@ -65,7 +65,7 @@
             this.lblCriterioMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriterioMarca.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioMarca.Name = "lblCriterioMarca";
-            this.lblCriterioMarca.Size = new System.Drawing.Size(89, 25);
+            this.lblCriterioMarca.Size = new System.Drawing.Size(61, 16);
             this.lblCriterioMarca.TabIndex = 58;
             this.lblCriterioMarca.Text = "Criterio:";
             // 
@@ -75,7 +75,7 @@
             this.lblCampoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoMarca.Location = new System.Drawing.Point(11, 327);
             this.lblCampoMarca.Name = "lblCampoMarca";
-            this.lblCampoMarca.Size = new System.Drawing.Size(88, 25);
+            this.lblCampoMarca.Size = new System.Drawing.Size(60, 16);
             this.lblCampoMarca.TabIndex = 57;
             this.lblCampoMarca.Text = "Campo:";
             // 
@@ -98,7 +98,7 @@
             // 
             this.txtFiltrarMarca.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarMarca.Name = "txtFiltrarMarca";
-            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 26);
+            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 20);
             this.txtFiltrarMarca.TabIndex = 55;
             // 
             // cbCriterioMarca
@@ -107,7 +107,7 @@
             this.cbCriterioMarca.FormattingEnabled = true;
             this.cbCriterioMarca.Location = new System.Drawing.Point(118, 346);
             this.cbCriterioMarca.Name = "cbCriterioMarca";
-            this.cbCriterioMarca.Size = new System.Drawing.Size(97, 28);
+            this.cbCriterioMarca.Size = new System.Drawing.Size(97, 21);
             this.cbCriterioMarca.TabIndex = 54;
             // 
             // cbCampoMarca
@@ -116,7 +116,7 @@
             this.cbCampoMarca.FormattingEnabled = true;
             this.cbCampoMarca.Location = new System.Drawing.Point(11, 346);
             this.cbCampoMarca.Name = "cbCampoMarca";
-            this.cbCampoMarca.Size = new System.Drawing.Size(94, 28);
+            this.cbCampoMarca.Size = new System.Drawing.Size(94, 21);
             this.cbCampoMarca.TabIndex = 53;
             // 
             // btnRefrescar
@@ -133,6 +133,7 @@
             this.btnRefrescar.TabIndex = 52;
             this.btnRefrescar.Text = "REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnAgregar
             // 

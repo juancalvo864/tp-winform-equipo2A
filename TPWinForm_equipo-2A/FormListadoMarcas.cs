@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,9 +32,19 @@ namespace TPWinForm_equipo_2A
 
         private void FormListadoMarcas_Load(object sender, EventArgs e)
         {
-            MarcaNegocio negocio = new MarcaNegocio(); 
-            dgvMarcas.DataSource = negocio.Listar(); 
-            dgvMarcas.Columns["Id"].Visible = false;    
+            Cargar();
+        }
+
+        private void Cargar()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            dgvMarcas.DataSource = negocio.Listar();
+            dgvMarcas.Columns["Id"].Visible = false;
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Cargar();
         }
     }
 }
