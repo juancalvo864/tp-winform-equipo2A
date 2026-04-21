@@ -49,7 +49,7 @@
             this.lblCriterioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriterioCategoria.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioCategoria.Name = "lblCriterioCategoria";
-            this.lblCriterioCategoria.Size = new System.Drawing.Size(89, 25);
+            this.lblCriterioCategoria.Size = new System.Drawing.Size(61, 16);
             this.lblCriterioCategoria.TabIndex = 46;
             this.lblCriterioCategoria.Text = "Criterio:";
             // 
@@ -59,7 +59,7 @@
             this.lblCampoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoCategoria.Location = new System.Drawing.Point(11, 327);
             this.lblCampoCategoria.Name = "lblCampoCategoria";
-            this.lblCampoCategoria.Size = new System.Drawing.Size(88, 25);
+            this.lblCampoCategoria.Size = new System.Drawing.Size(60, 16);
             this.lblCampoCategoria.TabIndex = 45;
             this.lblCampoCategoria.Text = "Campo:";
             // 
@@ -82,7 +82,7 @@
             // 
             this.txtFiltrarCat.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarCat.Name = "txtFiltrarCat";
-            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 26);
+            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 20);
             this.txtFiltrarCat.TabIndex = 43;
             // 
             // cbCriterioCat
@@ -91,7 +91,7 @@
             this.cbCriterioCat.FormattingEnabled = true;
             this.cbCriterioCat.Location = new System.Drawing.Point(118, 346);
             this.cbCriterioCat.Name = "cbCriterioCat";
-            this.cbCriterioCat.Size = new System.Drawing.Size(97, 28);
+            this.cbCriterioCat.Size = new System.Drawing.Size(97, 21);
             this.cbCriterioCat.TabIndex = 42;
             // 
             // cbCampoCat
@@ -100,7 +100,7 @@
             this.cbCampoCat.FormattingEnabled = true;
             this.cbCampoCat.Location = new System.Drawing.Point(11, 346);
             this.cbCampoCat.Name = "cbCampoCat";
-            this.cbCampoCat.Size = new System.Drawing.Size(94, 28);
+            this.cbCampoCat.Size = new System.Drawing.Size(94, 21);
             this.cbCampoCat.TabIndex = 41;
             // 
             // btnRefrescar
@@ -148,6 +148,7 @@
             this.btnEliminar.TabIndex = 37;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 

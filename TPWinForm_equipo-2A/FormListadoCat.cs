@@ -23,6 +23,7 @@ namespace TPWinForm_equipo_2A
         {
             FormAgregarCat formAgregarCat = new FormAgregarCat();
             formAgregarCat.ShowDialog();
+            Cargar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -46,5 +47,33 @@ namespace TPWinForm_equipo_2A
             dgvCategorias.Columns["Id"].Visible = false;
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvCategorias.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná una categoría primero.");
+                return;
+            }
+
+            Categoria categoria = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            CategoriaNegocio negocio = new CategoriaNegocio();
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que querés eliminar la categoría?", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    negocio.eliminar(categoria.Id);
+                    MessageBox.Show("Categoría eliminada correctamente.");
+                    Cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
