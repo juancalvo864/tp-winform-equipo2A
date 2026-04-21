@@ -67,7 +67,7 @@ namespace TPWinForm_equipo_2A
             }
             catch (Exception)
             {
-                picbArtiuclos.Load("https://t4.ftcdn.net/jpg/06/57/37/01/360_F_657370150_pdNeG5pjI976ZasVbKN9VqH1rfoykdYU.jpg");
+                picbArtiuclos.Image = TPWinForm_equipo_2A.Properties.Resources.placeholder;
             }
         }
 
