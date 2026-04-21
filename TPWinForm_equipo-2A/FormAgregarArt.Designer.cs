@@ -30,7 +30,6 @@
         {
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.lblListado = new System.Windows.Forms.Label();
             this.picbArticulos = new System.Windows.Forms.PictureBox();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
@@ -73,16 +72,6 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Visible = false;
             // 
-            // lblListado
-            // 
-            this.lblListado.AutoSize = true;
-            this.lblListado.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListado.Location = new System.Drawing.Point(18, 17);
-            this.lblListado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblListado.Name = "lblListado";
-            this.lblListado.Size = new System.Drawing.Size(0, 48);
-            this.lblListado.TabIndex = 64;
-            // 
             // picbArticulos
             // 
             this.picbArticulos.Cursor = System.Windows.Forms.Cursors.Default;
@@ -98,73 +87,73 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(21, 378);
+            this.txtUrlImagen.Location = new System.Drawing.Point(12, 363);
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(346, 26);
+            this.txtUrlImagen.Size = new System.Drawing.Size(346, 20);
             this.txtUrlImagen.TabIndex = 62;
             // 
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(18, 348);
+            this.lblImagen.Location = new System.Drawing.Point(12, 333);
             this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(187, 25);
+            this.lblImagen.Size = new System.Drawing.Size(136, 17);
             this.lblImagen.TabIndex = 57;
             this.lblImagen.Text = "Imagen de articulo : ";
             // 
             // txtbDescripcion
             // 
-            this.txtbDescripcion.Location = new System.Drawing.Point(21, 445);
+            this.txtbDescripcion.Location = new System.Drawing.Point(12, 430);
             this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Size = new System.Drawing.Size(346, 26);
+            this.txtbDescripcion.Size = new System.Drawing.Size(346, 20);
             this.txtbDescripcion.TabIndex = 59;
             // 
             // txtbPrecio
             // 
-            this.txtbPrecio.Location = new System.Drawing.Point(21, 312);
+            this.txtbPrecio.Location = new System.Drawing.Point(12, 297);
             this.txtbPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbPrecio.Name = "txtbPrecio";
-            this.txtbPrecio.Size = new System.Drawing.Size(346, 26);
+            this.txtbPrecio.Size = new System.Drawing.Size(346, 20);
             this.txtbPrecio.TabIndex = 56;
             // 
             // cboxCategoria
             // 
             this.cboxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCategoria.FormattingEnabled = true;
-            this.cboxCategoria.Location = new System.Drawing.Point(21, 245);
+            this.cboxCategoria.Location = new System.Drawing.Point(12, 230);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxCategoria.Name = "cboxCategoria";
-            this.cboxCategoria.Size = new System.Drawing.Size(346, 28);
+            this.cboxCategoria.Size = new System.Drawing.Size(346, 21);
             this.cboxCategoria.TabIndex = 54;
             // 
             // cboxMarca
             // 
             this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxMarca.FormattingEnabled = true;
-            this.cboxMarca.Location = new System.Drawing.Point(21, 177);
+            this.cboxMarca.Location = new System.Drawing.Point(12, 162);
             this.cboxMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxMarca.Name = "cboxMarca";
-            this.cboxMarca.Size = new System.Drawing.Size(346, 28);
+            this.cboxMarca.Size = new System.Drawing.Size(346, 21);
             this.cboxMarca.TabIndex = 52;
             // 
             // txtbNombre
             // 
-            this.txtbNombre.Location = new System.Drawing.Point(21, 111);
+            this.txtbNombre.Location = new System.Drawing.Point(12, 96);
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(346, 26);
+            this.txtbNombre.Size = new System.Drawing.Size(346, 20);
             this.txtbNombre.TabIndex = 50;
             // 
             // txtbCodArt
             // 
-            this.txtbCodArt.Location = new System.Drawing.Point(21, 48);
+            this.txtbCodArt.Location = new System.Drawing.Point(12, 33);
             this.txtbCodArt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbCodArt.Name = "txtbCodArt";
-            this.txtbCodArt.Size = new System.Drawing.Size(346, 26);
+            this.txtbCodArt.Size = new System.Drawing.Size(346, 20);
             this.txtbCodArt.TabIndex = 48;
             // 
             // btnCancelar
@@ -199,15 +188,16 @@
             this.btnAgregar.TabIndex = 60;
             this.btnAgregar.Text = "ACEPTAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(16, 282);
+            this.lblPrecio.Location = new System.Drawing.Point(12, 267);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(83, 25);
+            this.lblPrecio.Size = new System.Drawing.Size(60, 17);
             this.lblPrecio.TabIndex = 55;
             this.lblPrecio.Text = "Precio : ";
             // 
@@ -215,10 +205,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(16, 83);
+            this.lblNombre.Location = new System.Drawing.Point(12, 68);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(97, 25);
+            this.lblNombre.Size = new System.Drawing.Size(70, 17);
             this.lblNombre.TabIndex = 49;
             this.lblNombre.Text = "Nombre : ";
             // 
@@ -226,10 +216,10 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(16, 214);
+            this.lblCategoria.Location = new System.Drawing.Point(12, 199);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(113, 25);
+            this.lblCategoria.Size = new System.Drawing.Size(81, 17);
             this.lblCategoria.TabIndex = 53;
             this.lblCategoria.Text = "Categoría : ";
             // 
@@ -237,10 +227,10 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(16, 414);
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 399);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(130, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(94, 17);
             this.lblDescripcion.TabIndex = 58;
             this.lblDescripcion.Text = "Descripción : ";
             // 
@@ -248,10 +238,10 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(16, 146);
+            this.lblMarca.Location = new System.Drawing.Point(12, 131);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(78, 25);
+            this.lblMarca.Size = new System.Drawing.Size(55, 17);
             this.lblMarca.TabIndex = 51;
             this.lblMarca.Text = "Marca: ";
             // 
@@ -259,10 +249,10 @@
             // 
             this.lblCodArt.AutoSize = true;
             this.lblCodArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodArt.Location = new System.Drawing.Point(16, 17);
+            this.lblCodArt.Location = new System.Drawing.Point(12, 11);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(185, 25);
+            this.lblCodArt.Size = new System.Drawing.Size(134, 17);
             this.lblCodArt.TabIndex = 47;
             this.lblCodArt.Text = "Código de articulo : ";
             // 
@@ -272,7 +262,6 @@
             this.ClientSize = new System.Drawing.Size(1032, 575);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.lblListado);
             this.Controls.Add(this.picbArticulos);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblImagen);
@@ -297,6 +286,7 @@
             this.Name = "FormAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar artículo";
+            this.Load += new System.EventHandler(this.FormAgregarArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,7 +296,6 @@
         #endregion
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Label lblListado;
         private System.Windows.Forms.PictureBox picbArticulos;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblImagen;

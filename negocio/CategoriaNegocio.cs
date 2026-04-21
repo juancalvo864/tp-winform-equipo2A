@@ -31,9 +31,9 @@ namespace negocio
 
                     return listaCategoria; 
 			}
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error de lectura en la DB" + ex.Message);
             }
             finally
 			{
@@ -41,6 +41,61 @@ namespace negocio
             }
         }
 
+        public void agregar(Categoria cat)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into CATEGORIAS(Descripcion) values(@Descripcion)");
+                datos.setearParametro("@Descripcion", cat.Descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void editar(Categoria editado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE CATEGORIAS SET Descripcion = @Descripcion WHERE Id = @IdCategoria;");
+                datos.setearParametro("@Descripcion", editado.Descripcion);
+                datos.setearParametro("@IdCategoria", editado.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete FROM CATEGORIAS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

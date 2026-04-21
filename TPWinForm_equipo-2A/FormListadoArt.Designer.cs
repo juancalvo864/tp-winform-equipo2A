@@ -64,6 +64,7 @@
             this.btnPrev.Text = "<-";
             this.btnPrev.UseVisualStyleBackColor = true;
             this.btnPrev.Visible = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
@@ -78,6 +79,7 @@
             this.btnNext.Text = "->";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblErrorBusqueda
             // 
@@ -86,7 +88,7 @@
             this.lblErrorBusqueda.ForeColor = System.Drawing.Color.Red;
             this.lblErrorBusqueda.Location = new System.Drawing.Point(3, 412);
             this.lblErrorBusqueda.Name = "lblErrorBusqueda";
-            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 25);
+            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 16);
             this.lblErrorBusqueda.TabIndex = 38;
             // 
             // label2
@@ -95,7 +97,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(150, 354);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 37;
             this.label2.Text = "Criterio:";
             // 
@@ -105,7 +107,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 354);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 36;
             this.label1.Text = "Campo:";
             // 
@@ -116,7 +118,7 @@
             this.lblERROR.ForeColor = System.Drawing.Color.Red;
             this.lblERROR.Location = new System.Drawing.Point(3, 412);
             this.lblERROR.Name = "lblERROR";
-            this.lblERROR.Size = new System.Drawing.Size(0, 25);
+            this.lblERROR.Size = new System.Drawing.Size(0, 16);
             this.lblERROR.TabIndex = 35;
             // 
             // btnFiltrar
@@ -138,7 +140,7 @@
             // 
             this.txtFiltro.Location = new System.Drawing.Point(294, 374);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(276, 26);
+            this.txtFiltro.Size = new System.Drawing.Size(276, 20);
             this.txtFiltro.TabIndex = 33;
             // 
             // cbCriterio
@@ -147,7 +149,7 @@
             this.cbCriterio.FormattingEnabled = true;
             this.cbCriterio.Location = new System.Drawing.Point(153, 373);
             this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(121, 28);
+            this.cbCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbCriterio.TabIndex = 32;
             // 
             // cbCampo
@@ -156,7 +158,7 @@
             this.cbCampo.FormattingEnabled = true;
             this.cbCampo.Location = new System.Drawing.Point(13, 373);
             this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(121, 28);
+            this.cbCampo.Size = new System.Drawing.Size(121, 21);
             this.cbCampo.TabIndex = 31;
             // 
             // picbArtiuclos
@@ -259,6 +261,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(699, 299);
             this.dgvArticulos.TabIndex = 23;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // btnSalir
             // 
@@ -274,7 +277,7 @@
             this.btnSalir.TabIndex = 41;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.button1_Click);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FormListadoArt
             // 
