@@ -33,12 +33,12 @@
             this.picbArticulos = new System.Windows.Forms.PictureBox();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
-            this.txtbDescripcion = new System.Windows.Forms.TextBox();
-            this.txtbPrecio = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cboxCategoria = new System.Windows.Forms.ComboBox();
             this.cboxMarca = new System.Windows.Forms.ComboBox();
-            this.txtbNombre = new System.Windows.Forms.TextBox();
-            this.txtbCodArt = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodArt = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -90,8 +90,8 @@
             this.txtUrlImagen.Location = new System.Drawing.Point(12, 363);
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(346, 20);
-            this.txtUrlImagen.TabIndex = 62;
+            this.txtUrlImagen.Size = new System.Drawing.Size(346, 26);
+            this.txtUrlImagen.TabIndex = 5;
             // 
             // lblImagen
             // 
@@ -100,61 +100,63 @@
             this.lblImagen.Location = new System.Drawing.Point(12, 333);
             this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(136, 17);
+            this.lblImagen.Size = new System.Drawing.Size(187, 25);
             this.lblImagen.TabIndex = 57;
             this.lblImagen.Text = "Imagen de articulo : ";
             // 
-            // txtbDescripcion
+            // txtDescripcion
             // 
-            this.txtbDescripcion.Location = new System.Drawing.Point(12, 430);
-            this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Size = new System.Drawing.Size(346, 20);
-            this.txtbDescripcion.TabIndex = 59;
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 430);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(346, 26);
+            this.txtDescripcion.TabIndex = 6;
             // 
-            // txtbPrecio
+            // txtPrecio
             // 
-            this.txtbPrecio.Location = new System.Drawing.Point(12, 297);
-            this.txtbPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbPrecio.Name = "txtbPrecio";
-            this.txtbPrecio.Size = new System.Drawing.Size(346, 20);
-            this.txtbPrecio.TabIndex = 56;
+            this.txtPrecio.Location = new System.Drawing.Point(12, 297);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(346, 26);
+            this.txtPrecio.TabIndex = 4;
             // 
             // cboxCategoria
             // 
+            this.cboxCategoria.BackColor = System.Drawing.Color.White;
             this.cboxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCategoria.FormattingEnabled = true;
             this.cboxCategoria.Location = new System.Drawing.Point(12, 230);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxCategoria.Name = "cboxCategoria";
-            this.cboxCategoria.Size = new System.Drawing.Size(346, 21);
-            this.cboxCategoria.TabIndex = 54;
+            this.cboxCategoria.Size = new System.Drawing.Size(346, 28);
+            this.cboxCategoria.TabIndex = 3;
             // 
             // cboxMarca
             // 
+            this.cboxMarca.BackColor = System.Drawing.Color.White;
             this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxMarca.FormattingEnabled = true;
             this.cboxMarca.Location = new System.Drawing.Point(12, 162);
             this.cboxMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxMarca.Name = "cboxMarca";
-            this.cboxMarca.Size = new System.Drawing.Size(346, 21);
-            this.cboxMarca.TabIndex = 52;
+            this.cboxMarca.Size = new System.Drawing.Size(346, 28);
+            this.cboxMarca.TabIndex = 2;
             // 
-            // txtbNombre
+            // txtNombre
             // 
-            this.txtbNombre.Location = new System.Drawing.Point(12, 96);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(346, 20);
-            this.txtbNombre.TabIndex = 50;
+            this.txtNombre.Location = new System.Drawing.Point(12, 96);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(346, 26);
+            this.txtNombre.TabIndex = 1;
             // 
-            // txtbCodArt
+            // txtCodArt
             // 
-            this.txtbCodArt.Location = new System.Drawing.Point(12, 33);
-            this.txtbCodArt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbCodArt.Name = "txtbCodArt";
-            this.txtbCodArt.Size = new System.Drawing.Size(346, 20);
-            this.txtbCodArt.TabIndex = 48;
+            this.txtCodArt.Location = new System.Drawing.Point(12, 33);
+            this.txtCodArt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodArt.Name = "txtCodArt";
+            this.txtCodArt.Size = new System.Drawing.Size(346, 26);
+            this.txtCodArt.TabIndex = 0;
             // 
             // btnCancelar
             // 
@@ -168,7 +170,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(220, 60);
-            this.btnCancelar.TabIndex = 61;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -185,7 +187,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(220, 60);
-            this.btnAgregar.TabIndex = 60;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "ACEPTAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -197,7 +199,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(12, 267);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(60, 17);
+            this.lblPrecio.Size = new System.Drawing.Size(83, 25);
             this.lblPrecio.TabIndex = 55;
             this.lblPrecio.Text = "Precio : ";
             // 
@@ -208,7 +210,7 @@
             this.lblNombre.Location = new System.Drawing.Point(12, 68);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(70, 17);
+            this.lblNombre.Size = new System.Drawing.Size(97, 25);
             this.lblNombre.TabIndex = 49;
             this.lblNombre.Text = "Nombre : ";
             // 
@@ -219,7 +221,7 @@
             this.lblCategoria.Location = new System.Drawing.Point(12, 199);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(81, 17);
+            this.lblCategoria.Size = new System.Drawing.Size(113, 25);
             this.lblCategoria.TabIndex = 53;
             this.lblCategoria.Text = "Categoría : ";
             // 
@@ -230,7 +232,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(12, 399);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(94, 17);
+            this.lblDescripcion.Size = new System.Drawing.Size(130, 25);
             this.lblDescripcion.TabIndex = 58;
             this.lblDescripcion.Text = "Descripción : ";
             // 
@@ -241,7 +243,7 @@
             this.lblMarca.Location = new System.Drawing.Point(12, 131);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(55, 17);
+            this.lblMarca.Size = new System.Drawing.Size(78, 25);
             this.lblMarca.TabIndex = 51;
             this.lblMarca.Text = "Marca: ";
             // 
@@ -252,8 +254,8 @@
             this.lblCodArt.Location = new System.Drawing.Point(12, 11);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(134, 17);
-            this.lblCodArt.TabIndex = 47;
+            this.lblCodArt.Size = new System.Drawing.Size(185, 25);
+            this.lblCodArt.TabIndex = 0;
             this.lblCodArt.Text = "Código de articulo : ";
             // 
             // FormAgregarArt
@@ -265,12 +267,12 @@
             this.Controls.Add(this.picbArticulos);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblImagen);
-            this.Controls.Add(this.txtbDescripcion);
-            this.Controls.Add(this.txtbPrecio);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.cboxCategoria);
             this.Controls.Add(this.cboxMarca);
-            this.Controls.Add(this.txtbNombre);
-            this.Controls.Add(this.txtbCodArt);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodArt);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblPrecio);
@@ -299,12 +301,12 @@
         private System.Windows.Forms.PictureBox picbArticulos;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblImagen;
-        private System.Windows.Forms.TextBox txtbDescripcion;
-        private System.Windows.Forms.TextBox txtbPrecio;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.ComboBox cboxCategoria;
         private System.Windows.Forms.ComboBox cboxMarca;
-        private System.Windows.Forms.TextBox txtbNombre;
-        private System.Windows.Forms.TextBox txtbCodArt;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodArt;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblPrecio;

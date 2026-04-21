@@ -41,7 +41,7 @@ namespace TPWinForm_equipo_2A
 
         private void FormListadoArt_Load(object sender, EventArgs e)
         {
-            cargar();
+            Cargar();
             dgvArticulos.RowHeadersVisible = false;
             dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.##";
@@ -51,7 +51,7 @@ namespace TPWinForm_equipo_2A
             cbCampo.Items.Add("Precio");
         }
 
-        private void cargar()
+        private void Cargar()
         {
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             listaArticulos = artNegocio.Listar();
@@ -100,6 +100,7 @@ namespace TPWinForm_equipo_2A
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (urlsImagenes.Count == 0) return;
+
             indiceImagenActual = (indiceImagenActual + 1) % urlsImagenes.Count;
             CargarImagen(urlsImagenes[indiceImagenActual]);
             ActualizarVisibilidadBotones();
@@ -115,5 +116,38 @@ namespace TPWinForm_equipo_2A
         {
             Close();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;    
+            try
+            {
+                if (dgvArticulos.CurrentRow == null)
+                {
+                    MessageBox.Show("Seleccioná un artículo primero.");
+                    return;
+                }
+
+                DialogResult respuesta = MessageBox.Show("¿Seguro que querés eliminar el artículo?","Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    negocio.Eliminar(articulo.Id);
+                    MessageBox.Show("Artículo eliminado correctamente.");
+                    Cargar(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Cargar(); 
+        }
+
+   
     }
 }

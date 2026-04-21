@@ -30,7 +30,7 @@
         {
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtbMarca = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             this.btnAgregar.TabIndex = 52;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelar
             // 
@@ -67,15 +68,15 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtbMarca
+            // txtDescripcion
             // 
-            this.txtbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtbMarca.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtbMarca.Location = new System.Drawing.Point(66, 97);
-            this.txtbMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbMarca.Name = "txtbMarca";
-            this.txtbMarca.Size = new System.Drawing.Size(496, 26);
-            this.txtbMarca.TabIndex = 51;
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtDescripcion.Location = new System.Drawing.Point(66, 97);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(496, 26);
+            this.txtDescripcion.TabIndex = 51;
             // 
             // lblMarca
             // 
@@ -94,7 +95,7 @@
             this.ClientSize = new System.Drawing.Size(632, 269);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtbMarca);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -112,7 +113,7 @@
 
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtbMarca;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblMarca;
     }
 }

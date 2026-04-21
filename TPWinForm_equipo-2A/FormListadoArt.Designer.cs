@@ -88,7 +88,7 @@
             this.lblErrorBusqueda.ForeColor = System.Drawing.Color.Red;
             this.lblErrorBusqueda.Location = new System.Drawing.Point(3, 412);
             this.lblErrorBusqueda.Name = "lblErrorBusqueda";
-            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 16);
+            this.lblErrorBusqueda.Size = new System.Drawing.Size(0, 25);
             this.lblErrorBusqueda.TabIndex = 38;
             // 
             // label2
@@ -97,7 +97,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(150, 354);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 37;
             this.label2.Text = "Criterio:";
             // 
@@ -107,7 +107,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 354);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 36;
             this.label1.Text = "Campo:";
             // 
@@ -118,7 +118,7 @@
             this.lblERROR.ForeColor = System.Drawing.Color.Red;
             this.lblERROR.Location = new System.Drawing.Point(3, 412);
             this.lblERROR.Name = "lblERROR";
-            this.lblERROR.Size = new System.Drawing.Size(0, 16);
+            this.lblERROR.Size = new System.Drawing.Size(0, 25);
             this.lblERROR.TabIndex = 35;
             // 
             // btnFiltrar
@@ -140,7 +140,7 @@
             // 
             this.txtFiltro.Location = new System.Drawing.Point(294, 374);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(276, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(276, 26);
             this.txtFiltro.TabIndex = 33;
             // 
             // cbCriterio
@@ -149,7 +149,7 @@
             this.cbCriterio.FormattingEnabled = true;
             this.cbCriterio.Location = new System.Drawing.Point(153, 373);
             this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(121, 21);
+            this.cbCriterio.Size = new System.Drawing.Size(121, 28);
             this.cbCriterio.TabIndex = 32;
             // 
             // cbCampo
@@ -158,7 +158,7 @@
             this.cbCampo.FormattingEnabled = true;
             this.cbCampo.Location = new System.Drawing.Point(13, 373);
             this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(121, 21);
+            this.cbCampo.Size = new System.Drawing.Size(121, 28);
             this.cbCampo.TabIndex = 31;
             // 
             // picbArtiuclos
@@ -203,6 +203,7 @@
             this.btnRefrescar.TabIndex = 27;
             this.btnRefrescar.Text = "REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnAgregar
             // 
@@ -234,6 +235,7 @@
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 

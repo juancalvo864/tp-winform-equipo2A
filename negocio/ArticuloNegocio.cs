@@ -48,12 +48,16 @@ namespace negocio
             }
         }
 
-        public void agregar(Articulo art)
+      
+        public void Agregar(Articulo art)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values(@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); insert into IMAGENES(IdArticulo, ImagenUrl) values(SCOPE_IDENTITY(), @UrlImagen)");
+                datos.setearConsulta("insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
+                                     "values(@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); " +
+                                     "insert into IMAGENES(IdArticulo, ImagenUrl) values(SCOPE_IDENTITY(), @UrlImagen)");
+                
                 datos.setearParametro("@Codigo", art.Codigo);
                 datos.setearParametro("@Nombre", art.Nombre);
                 datos.setearParametro("@Descripcion", art.Descripcion);
@@ -61,6 +65,7 @@ namespace negocio
                 datos.setearParametro("@IdCategoria", art.Categoria.Id);
                 datos.setearParametro("@Precio", art.Precio);
                 datos.setearParametro("@UrlImagen", art.Imagen.ImagenUrl);
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -74,7 +79,28 @@ namespace negocio
             }
         }
 
-        public void editar(Articulo editado)
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM IMAGENES WHERE IdArticulo = @Id; DELETE FROM ARTICULOS WHERE Id = @Id;");
+
+                datos.setearParametro("@Id", id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void Editar(Articulo editado)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -103,5 +129,32 @@ namespace negocio
             }
         }
 
+        public bool ExisteCodigo(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
+                datos.setearParametro("@Codigo", codigo);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    return (int)datos.Lector[0] > 0;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

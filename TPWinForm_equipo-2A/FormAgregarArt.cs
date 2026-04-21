@@ -27,7 +27,57 @@ namespace TPWinForm_equipo_2A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Close();
+            Articulo nuevoArt = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                decimal precio;
+
+                if (string.IsNullOrWhiteSpace(txtCodArt.Text))
+                {
+                    MessageBox.Show("Para continuar ingrese un código.");
+                    txtCodArt.Clear();
+                    txtCodArt.Focus();
+                    return;
+                }
+
+                if (!decimal.TryParse(txtPrecio.Text, out precio))
+                {
+                    MessageBox.Show("Ingresá un precio válido.");
+                    txtPrecio.Clear();
+                    txtPrecio.Focus();
+                    return;
+                }
+                
+                if (negocio.ExisteCodigo(txtCodArt.Text.Trim()))
+                {
+                    MessageBox.Show("Ya existe un artículo con ese código.");
+                    txtCodArt.Clear();
+                    txtCodArt.Focus();
+                    return;
+                }
+
+                nuevoArt.Codigo = txtCodArt.Text.Trim();
+                nuevoArt.Nombre = txtNombre.Text;
+                nuevoArt.Descripcion = txtDescripcion.Text; 
+                nuevoArt.Precio = precio;
+                nuevoArt.Marca = new Marca();
+                nuevoArt.Marca.Id = (int)cboxMarca.SelectedValue;
+                nuevoArt.Categoria = new Categoria();
+                nuevoArt.Categoria.Id = (int)cboxCategoria.SelectedValue;
+                nuevoArt.Imagen = new Imagen();
+                nuevoArt.Imagen.ImagenUrl = txtUrlImagen.Text;
+
+                negocio.Agregar(nuevoArt);  
+
+                MessageBox.Show("Artículo agregado exitosamente.");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString()); 
+            }
         }
 
         private void FormAgregarArt_Load(object sender, EventArgs e)
