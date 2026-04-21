@@ -23,6 +23,7 @@ namespace TPWinForm_equipo_2A
         {
             FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
             formAgregarMarca.ShowDialog();
+            Cargar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -45,6 +46,50 @@ namespace TPWinForm_equipo_2A
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             Cargar();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvMarcas.CurrentRow != null)
+            {
+                Marca marcaSeleccionada = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                FormAgregarMarca form = new FormAgregarMarca(marcaSeleccionada);
+                form.ShowDialog();
+                Cargar();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una marca para editar.");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvMarcas.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná una marca primero.");
+                return;
+            }
+
+            Marca marca = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+            MarcaNegocio negocio = new MarcaNegocio();
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que querés eliminar la marca?", "Eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    negocio.eliminar(marca.Id);
+                    MessageBox.Show("Marca eliminada correctamente.");
+                    Cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

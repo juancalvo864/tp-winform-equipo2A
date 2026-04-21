@@ -75,7 +75,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(66, 97);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(496, 26);
+            this.txtDescripcion.Size = new System.Drawing.Size(496, 20);
             this.txtDescripcion.TabIndex = 51;
             // 
             // lblMarca
@@ -85,7 +85,7 @@
             this.lblMarca.Location = new System.Drawing.Point(188, 43);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(207, 25);
+            this.lblMarca.Size = new System.Drawing.Size(150, 17);
             this.lblMarca.TabIndex = 50;
             this.lblMarca.Text = "Ingresar nueva marca:";
             // 
@@ -104,6 +104,7 @@
             this.Name = "FormAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar marca";
+            this.Load += new System.EventHandler(this.FormAgregarMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
