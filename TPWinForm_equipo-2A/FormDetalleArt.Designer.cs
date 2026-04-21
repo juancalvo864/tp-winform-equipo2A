@@ -42,6 +42,8 @@
             this.lblCodArt = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.btnPrev = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@
             this.lblMarca2.AutoSize = true;
             this.lblMarca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca2.ForeColor = System.Drawing.Color.Black;
-            this.lblMarca2.Location = new System.Drawing.Point(90, 114);
+            this.lblMarca2.Location = new System.Drawing.Point(80, 114);
             this.lblMarca2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca2.Name = "lblMarca2";
             this.lblMarca2.Size = new System.Drawing.Size(55, 17);
@@ -63,7 +65,7 @@
             this.lblCategoria2.AutoSize = true;
             this.lblCategoria2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria2.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria2.Location = new System.Drawing.Point(130, 160);
+            this.lblCategoria2.Location = new System.Drawing.Point(109, 160);
             this.lblCategoria2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria2.Name = "lblCategoria2";
             this.lblCategoria2.Size = new System.Drawing.Size(77, 17);
@@ -78,10 +80,10 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(638, 437);
+            this.btnCerrar.Location = new System.Drawing.Point(593, 415);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(220, 60);
+            this.btnCerrar.Size = new System.Drawing.Size(154, 30);
             this.btnCerrar.TabIndex = 36;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -92,7 +94,7 @@
             this.lblPrecio2.AutoSize = true;
             this.lblPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio2.ForeColor = System.Drawing.Color.Black;
-            this.lblPrecio2.Location = new System.Drawing.Point(104, 206);
+            this.lblPrecio2.Location = new System.Drawing.Point(86, 206);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio2.Name = "lblPrecio2";
             this.lblPrecio2.Size = new System.Drawing.Size(24, 17);
@@ -104,7 +106,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.Black;
-            this.lblPrecio.Location = new System.Drawing.Point(18, 206);
+            this.lblPrecio.Location = new System.Drawing.Point(22, 206);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(64, 16);
@@ -116,7 +118,7 @@
             this.lblNombre2.AutoSize = true;
             this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre2.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre2.Location = new System.Drawing.Point(117, 68);
+            this.lblNombre2.Location = new System.Drawing.Point(96, 68);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre2.Name = "lblNombre2";
             this.lblNombre2.Size = new System.Drawing.Size(48, 17);
@@ -128,7 +130,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(18, 68);
+            this.lblNombre.Location = new System.Drawing.Point(22, 68);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(74, 16);
@@ -138,10 +140,10 @@
             // pictureBox
             // 
             this.pictureBox.ErrorImage = null;
-            this.pictureBox.Location = new System.Drawing.Point(465, 22);
+            this.pictureBox.Location = new System.Drawing.Point(419, 22);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(393, 340);
+            this.pictureBox.Size = new System.Drawing.Size(328, 274);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 41;
             this.pictureBox.TabStop = false;
@@ -151,7 +153,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(18, 160);
+            this.lblCategoria.Location = new System.Drawing.Point(22, 160);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(87, 16);
@@ -163,7 +165,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.Black;
-            this.lblMarca.Location = new System.Drawing.Point(18, 114);
+            this.lblMarca.Location = new System.Drawing.Point(22, 114);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(58, 16);
@@ -175,7 +177,7 @@
             this.lblCodArt2.AutoSize = true;
             this.lblCodArt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodArt2.ForeColor = System.Drawing.Color.Black;
-            this.lblCodArt2.Location = new System.Drawing.Point(230, 22);
+            this.lblCodArt2.Location = new System.Drawing.Point(168, 22);
             this.lblCodArt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt2.Name = "lblCodArt2";
             this.lblCodArt2.Size = new System.Drawing.Size(60, 17);
@@ -187,7 +189,7 @@
             this.lblCodArt.AutoSize = true;
             this.lblCodArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodArt.ForeColor = System.Drawing.Color.Black;
-            this.lblCodArt.Location = new System.Drawing.Point(18, 22);
+            this.lblCodArt.Location = new System.Drawing.Point(22, 22);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
             this.lblCodArt.Size = new System.Drawing.Size(146, 16);
@@ -204,7 +206,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(434, 245);
+            this.groupBox1.Size = new System.Drawing.Size(362, 193);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Descripción";
@@ -220,10 +222,43 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "texto descripción";
             // 
+            // btnPrev
+            // 
+            this.btnPrev.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrev.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.Location = new System.Drawing.Point(502, 319);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnPrev.TabIndex = 50;
+            this.btnPrev.Text = "<-";
+            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Visible = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(593, 319);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 49;
+            this.btnNext.Text = "->";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // FormDetalleArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(872, 518);
+            this.ClientSize = new System.Drawing.Size(774, 460);
+            this.Controls.Add(this.btnPrev);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMarca2);
             this.Controls.Add(this.lblCategoria2);
@@ -270,5 +305,7 @@
         private System.Windows.Forms.Label lblCodArt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnNext;
     }
 }

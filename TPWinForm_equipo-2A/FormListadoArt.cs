@@ -23,11 +23,6 @@ namespace TPWinForm_equipo_2A
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregarArt formAgregarArt = new FormAgregarArt();
@@ -36,8 +31,12 @@ namespace TPWinForm_equipo_2A
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
-            FormDetalleArt formDetalles = new FormDetalleArt();
-            formDetalles.ShowDialog();
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FormDetalleArt formDetalles = new FormDetalleArt(seleccionado);
+                formDetalles.ShowDialog();
+            }
         }
 
         private void FormListadoArt_Load(object sender, EventArgs e)
@@ -89,23 +88,6 @@ namespace TPWinForm_equipo_2A
             }
         }
 
-        private List<string> ObtenerUrlsImagenesPorArticulo(int idArticulo)
-        {
-            List<string> urls = new List<string>();
-
-            foreach (DataGridViewRow fila in dgvArticulos.Rows)
-            {
-                int id = Convert.ToInt32(fila.Cells["Id"].Value);
-                string urlImagen = fila.Cells["Imagen"].Value.ToString();
-
-                if (id == idArticulo && !string.IsNullOrEmpty(urlImagen))
-                {
-                    urls.Add(urlImagen);
-                }
-            }
-
-            return urls;
-        }
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
@@ -127,6 +109,11 @@ namespace TPWinForm_equipo_2A
         {
             btnPrev.Visible = urlsImagenes.Count > 1;
             btnNext.Visible = urlsImagenes.Count > 1;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
