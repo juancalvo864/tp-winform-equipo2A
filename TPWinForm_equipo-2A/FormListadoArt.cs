@@ -85,6 +85,7 @@ namespace TPWinForm_equipo_2A
 
                 if (urlsImagenes.Count > 0)
                     CargarImagen(urlsImagenes[0]);
+                ActualizarVisibilidadBotones();
             }
         }
 
@@ -108,12 +109,24 @@ namespace TPWinForm_equipo_2A
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            Close();
+            if (urlsImagenes.Count == 0) return;
+            indiceImagenActual = (indiceImagenActual - 1 + urlsImagenes.Count) % urlsImagenes.Count;
+            CargarImagen(urlsImagenes[indiceImagenActual]);
+            ActualizarVisibilidadBotones();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Close();
+            if (urlsImagenes.Count == 0) return;
+            indiceImagenActual = (indiceImagenActual + 1) % urlsImagenes.Count;
+            CargarImagen(urlsImagenes[indiceImagenActual]);
+            ActualizarVisibilidadBotones();
+        }
+
+        private void ActualizarVisibilidadBotones()
+        {
+            btnPrev.Visible = urlsImagenes.Count > 1;
+            btnNext.Visible = urlsImagenes.Count > 1;
         }
     }
 }
