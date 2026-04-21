@@ -32,8 +32,7 @@ namespace negocio
                     articulo.Categoria = new Categoria();
                     articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     articulo.Precio = (decimal)datos.Lector["Precio"];
-
-
+                    articulo.Imagen = new Imagen();
                     listaArticulos.Add(articulo);	
                 }
 

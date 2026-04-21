@@ -54,7 +54,7 @@
             this.lblMarca2.Location = new System.Drawing.Point(90, 114);
             this.lblMarca2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca2.Name = "lblMarca2";
-            this.lblMarca2.Size = new System.Drawing.Size(78, 25);
+            this.lblMarca2.Size = new System.Drawing.Size(55, 17);
             this.lblMarca2.TabIndex = 47;
             this.lblMarca2.Text = "Marca1";
             // 
@@ -66,7 +66,7 @@
             this.lblCategoria2.Location = new System.Drawing.Point(130, 160);
             this.lblCategoria2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria2.Name = "lblCategoria2";
-            this.lblCategoria2.Size = new System.Drawing.Size(108, 25);
+            this.lblCategoria2.Size = new System.Drawing.Size(77, 17);
             this.lblCategoria2.TabIndex = 46;
             this.lblCategoria2.Text = "Categoría1";
             // 
@@ -95,7 +95,7 @@
             this.lblPrecio2.Location = new System.Drawing.Point(104, 206);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(34, 25);
+            this.lblPrecio2.Size = new System.Drawing.Size(24, 17);
             this.lblPrecio2.TabIndex = 45;
             this.lblPrecio2.Text = "$1";
             // 
@@ -107,7 +107,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(18, 206);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(92, 25);
+            this.lblPrecio.Size = new System.Drawing.Size(64, 16);
             this.lblPrecio.TabIndex = 44;
             this.lblPrecio.Text = "Precio : ";
             // 
@@ -119,7 +119,7 @@
             this.lblNombre2.Location = new System.Drawing.Point(117, 68);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(70, 25);
+            this.lblNombre2.Size = new System.Drawing.Size(48, 17);
             this.lblNombre2.TabIndex = 43;
             this.lblNombre2.Text = "Cosa1";
             // 
@@ -131,7 +131,7 @@
             this.lblNombre.Location = new System.Drawing.Point(18, 68);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(106, 25);
+            this.lblNombre.Size = new System.Drawing.Size(74, 16);
             this.lblNombre.TabIndex = 42;
             this.lblNombre.Text = "Nombre : ";
             // 
@@ -154,7 +154,7 @@
             this.lblCategoria.Location = new System.Drawing.Point(18, 160);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(125, 25);
+            this.lblCategoria.Size = new System.Drawing.Size(87, 16);
             this.lblCategoria.TabIndex = 40;
             this.lblCategoria.Text = "Categoría : ";
             // 
@@ -166,7 +166,7 @@
             this.lblMarca.Location = new System.Drawing.Point(18, 114);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(85, 25);
+            this.lblMarca.Size = new System.Drawing.Size(58, 16);
             this.lblMarca.TabIndex = 39;
             this.lblMarca.Text = "Marca: ";
             // 
@@ -178,7 +178,7 @@
             this.lblCodArt2.Location = new System.Drawing.Point(230, 22);
             this.lblCodArt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt2.Name = "lblCodArt2";
-            this.lblCodArt2.Size = new System.Drawing.Size(86, 25);
+            this.lblCodArt2.Size = new System.Drawing.Size(60, 17);
             this.lblCodArt2.TabIndex = 38;
             this.lblCodArt2.Text = "Codigo1";
             // 
@@ -190,7 +190,7 @@
             this.lblCodArt.Location = new System.Drawing.Point(18, 22);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(206, 25);
+            this.lblCodArt.Size = new System.Drawing.Size(146, 16);
             this.lblCodArt.TabIndex = 37;
             this.lblCodArt.Text = "Código de artículo : ";
             // 
@@ -216,7 +216,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(9, 28);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(158, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(108, 16);
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "texto descripción";
             // 
@@ -245,6 +245,7 @@
             this.Name = "FormDetalleArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículo";
+            this.Load += new System.EventHandler(this.FormDetalleArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

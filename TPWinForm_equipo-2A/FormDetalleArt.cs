@@ -21,5 +21,10 @@ namespace TPWinForm_equipo_2A
         {
             Close();
         }
+
+        private void FormDetalleArt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

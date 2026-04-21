@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace negocio
 {
-    internal class ImagenNegocio
+    public class ImagenNegocio
     {
         public List<Imagen> Listar(int idArticulo)
         {
