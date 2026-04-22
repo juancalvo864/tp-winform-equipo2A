@@ -63,7 +63,7 @@ namespace TPWinForm_equipo_2A
         {
             try
             {
-                picbArtiuclos.Load(imagen);
+                picbArtiuclos.Load(ImagenesHelper.ObtenerRutaCompleta(imagen));
             }
             catch (Exception)
             {

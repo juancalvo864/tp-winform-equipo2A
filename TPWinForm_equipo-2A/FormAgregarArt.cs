@@ -153,7 +153,7 @@ namespace TPWinForm_equipo_2A
             if (rutasImagenesSeleccionadas.Count == 0)
                 return;
 
-            string carpetaImagenes = ObtenerCarpetaImagenes();
+            string carpetaImagenes = ImagenesHelper.ObtenerCarpetaImagenes();
             Directory.CreateDirectory(carpetaImagenes);
             ImagenNegocio imagenNegocio = new ImagenNegocio();
 
@@ -167,14 +167,9 @@ namespace TPWinForm_equipo_2A
 
                 Imagen imagen = new Imagen();
                 imagen.IdArticulo = idArticulo;
-                imagen.ImagenUrl = rutaDestino;
+                imagen.ImagenUrl = nombreArchivo;
                 imagenNegocio.Agregar(imagen);
             }
-        }
-
-        private string ObtenerCarpetaImagenes()
-        {
-            return Path.Combine(Application.StartupPath, "ImagenesProductos");
         }
 
         private string LimpiarNombreArchivo(string nombre)
