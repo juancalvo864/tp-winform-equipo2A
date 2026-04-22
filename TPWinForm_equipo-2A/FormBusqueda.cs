@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,24 @@ namespace TPWinForm_equipo_2A
 
         private void FormBusqueda_Load(object sender, EventArgs e)
         {
+            CargarCombos();
+        }
 
+        private void CargarCombos()
+        {
+            MarcaNegocio marcaNeg = new MarcaNegocio();
+            List<Marca> marcas = marcaNeg.Listar();
+            marcas.Insert(0, new Marca { Id = 0, Descripcion = "Todas" });
+            cbMarca.DataSource = marcas;
+            cbMarca.DisplayMember = "Descripcion";
+            cbMarca.ValueMember = "Id";
+
+            CategoriaNegocio catNeg = new CategoriaNegocio();
+            List<Categoria> categorias = catNeg.Listar();
+            categorias.Insert(0, new Categoria { Id = 0, Descripcion = "Todas" });
+            cbCategoria.DataSource = categorias;
+            cbCategoria.DisplayMember = "Descripcion";
+            cbCategoria.ValueMember = "Id";
         }
     }
 }
