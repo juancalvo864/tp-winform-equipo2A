@@ -70,5 +70,23 @@ namespace TPWinForm_equipo_2A
                 MessageBox.Show("Error al buscar: " + ex.Message);
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Clear();
+            cbMarca.SelectedIndex = 0;
+            cbCategoria.SelectedIndex = 0;
+            dgvResultados.DataSource = null;
+        }
+
+        private void dgvResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Articulo seleccionado = (Articulo)dgvResultados.Rows[e.RowIndex].DataBoundItem;
+                FormDetalleArt formDetalle = new FormDetalleArt(seleccionado);
+                formDetalle.ShowDialog();
+            }
+        }
     }
 }
