@@ -49,6 +49,8 @@ namespace TPWinForm_equipo_2A
 
                 if (urlsImagenes.Count > 0)
                     CargarImagen(urlsImagenes[0]);
+                else
+                    pictureBox.Image = TPWinForm_equipo_2A.Properties.Resources.placeholder;
 
                 ActualizarVisibilidadBotones();
             }
@@ -67,8 +69,9 @@ namespace TPWinForm_equipo_2A
 
         private void ActualizarVisibilidadBotones()
         {
-            btnPrev.Visible = urlsImagenes.Count > 1;
-            btnNext.Visible = urlsImagenes.Count > 1;
+            bool hayVariasImagenes = urlsImagenes.Count > 1;
+            btnPrev.Enabled = hayVariasImagenes;
+            btnNext.Enabled = hayVariasImagenes;
         }
 
         private void btnNext_Click(object sender, EventArgs e)

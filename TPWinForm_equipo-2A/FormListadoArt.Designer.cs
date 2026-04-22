@@ -53,6 +53,7 @@
             // btnPrev
             // 
             this.btnPrev.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPrev.Enabled = false;
             this.btnPrev.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -63,12 +64,12 @@
             this.btnPrev.TabIndex = 40;
             this.btnPrev.Text = "<-";
             this.btnPrev.UseVisualStyleBackColor = true;
-            this.btnPrev.Visible = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext.Enabled = false;
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,7 +79,6 @@
             this.btnNext.TabIndex = 39;
             this.btnNext.Text = "->";
             this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Visible = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblErrorBusqueda
