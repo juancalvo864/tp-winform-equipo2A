@@ -40,6 +40,7 @@
             this.agregarCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verListadoDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.MS1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +175,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarCategoríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verListadoDeCategoríasToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

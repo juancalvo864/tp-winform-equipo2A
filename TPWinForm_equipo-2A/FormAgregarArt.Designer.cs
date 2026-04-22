@@ -47,7 +47,10 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCodArt = new System.Windows.Forms.Label();
+            this.btnSeleccionarImagen = new System.Windows.Forms.Button();
+            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picbArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrev
@@ -90,7 +93,8 @@
             this.txtUrlImagen.Location = new System.Drawing.Point(12, 270);
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(346, 20);
+            this.txtUrlImagen.ReadOnly = true;
+            this.txtUrlImagen.Size = new System.Drawing.Size(346, 26);
             this.txtUrlImagen.TabIndex = 5;
             // 
             // lblImagen
@@ -258,10 +262,32 @@
             this.lblCodArt.TabIndex = 0;
             this.lblCodArt.Text = "CÓDIGO DE ARTICULO :";
             // 
+            // btnSeleccionarImagen
+            // 
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(370, 363);
+            this.btnSeleccionarImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(170, 26);
+            this.btnSeleccionarImagen.TabIndex = 68;
+            this.btnSeleccionarImagen.Text = "Seleccionar Imagen";
+            this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+            this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
+            // 
+            // pictureBoxImagen
+            // 
+            this.pictureBoxImagen.Location = new System.Drawing.Point(564, 48);
+            this.pictureBoxImagen.Name = "pictureBoxImagen";
+            this.pictureBoxImagen.Size = new System.Drawing.Size(450, 362);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImagen.TabIndex = 69;
+            this.pictureBoxImagen.TabStop = false;
+            // 
             // FormAgregarArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(790, 421);
+            this.ClientSize = new System.Drawing.Size(1032, 575);
+            this.Controls.Add(this.pictureBoxImagen);
+            this.Controls.Add(this.btnSeleccionarImagen);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.picbArticulos);
@@ -290,6 +316,7 @@
             this.Text = "Agregar artículo";
             this.Load += new System.EventHandler(this.FormAgregarArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +342,7 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCodArt;
+        private System.Windows.Forms.Button btnSeleccionarImagen;
+        private System.Windows.Forms.PictureBox pictureBoxImagen;
     }
 }
