@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPrev = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.picbArticulos = new System.Windows.Forms.PictureBox();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -47,50 +44,20 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCodArt = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picbArticulos)).BeginInit();
+            this.btnSeleccionarImagen = new System.Windows.Forms.Button();
+            this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
+            this.btnPrevImagen = new System.Windows.Forms.Button();
+            this.btnNextImagen = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.Location = new System.Drawing.Point(460, 317);
-            this.btnPrev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(135, 27);
-            this.btnPrev.TabIndex = 67;
-            this.btnPrev.Text = "<-";
-            this.btnPrev.UseVisualStyleBackColor = true;
-            this.btnPrev.Visible = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(595, 317);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(135, 27);
-            this.btnNext.TabIndex = 66;
-            this.btnNext.Text = "->";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Visible = false;
-            // 
-            // picbArticulos
-            // 
-            this.picbArticulos.Cursor = System.Windows.Forms.Cursors.Default;
-            this.picbArticulos.ErrorImage = null;
-            this.picbArticulos.InitialImage = null;
-            this.picbArticulos.Location = new System.Drawing.Point(406, 33);
-            this.picbArticulos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picbArticulos.Name = "picbArticulos";
-            this.picbArticulos.Size = new System.Drawing.Size(373, 274);
-            this.picbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picbArticulos.TabIndex = 63;
-            this.picbArticulos.TabStop = false;
             // 
             // txtUrlImagen
             // 
             this.txtUrlImagen.Location = new System.Drawing.Point(12, 270);
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(346, 20);
+            this.txtUrlImagen.ReadOnly = true;
+            this.txtUrlImagen.Size = new System.Drawing.Size(219, 20);
             this.txtUrlImagen.TabIndex = 5;
             // 
             // lblImagen
@@ -106,7 +73,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(12, 317);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 323);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(346, 20);
@@ -166,7 +133,7 @@
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(644, 380);
+            this.btnCancelar.Location = new System.Drawing.Point(644, 363);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 27);
@@ -183,7 +150,7 @@
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(446, 380);
+            this.btnAgregar.Location = new System.Drawing.Point(501, 363);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 27);
@@ -229,7 +196,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(12, 295);
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 301);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(75, 12);
@@ -258,13 +225,57 @@
             this.lblCodArt.TabIndex = 0;
             this.lblCodArt.Text = "CÓDIGO DE ARTICULO :";
             // 
+            // btnSeleccionarImagen
+            // 
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(239, 268);
+            this.btnSeleccionarImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(119, 24);
+            this.btnSeleccionarImagen.TabIndex = 68;
+            this.btnSeleccionarImagen.Text = "Agregar";
+            this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+            this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
+            // 
+            // pictureBoxImagen
+            // 
+            this.pictureBoxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxImagen.Location = new System.Drawing.Point(406, 33);
+            this.pictureBoxImagen.Name = "pictureBoxImagen";
+            this.pictureBoxImagen.Size = new System.Drawing.Size(373, 274);
+            this.pictureBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImagen.TabIndex = 69;
+            this.pictureBoxImagen.TabStop = false;
+            // 
+            // btnPrevImagen
+            // 
+            this.btnPrevImagen.Enabled = false;
+            this.btnPrevImagen.Location = new System.Drawing.Point(516, 313);
+            this.btnPrevImagen.Name = "btnPrevImagen";
+            this.btnPrevImagen.Size = new System.Drawing.Size(75, 27);
+            this.btnPrevImagen.TabIndex = 70;
+            this.btnPrevImagen.Text = "<";
+            this.btnPrevImagen.UseVisualStyleBackColor = true;
+            this.btnPrevImagen.Click += new System.EventHandler(this.btnPrevImagen_Click);
+            // 
+            // btnNextImagen
+            // 
+            this.btnNextImagen.Enabled = false;
+            this.btnNextImagen.Location = new System.Drawing.Point(597, 313);
+            this.btnNextImagen.Name = "btnNextImagen";
+            this.btnNextImagen.Size = new System.Drawing.Size(75, 27);
+            this.btnNextImagen.TabIndex = 71;
+            this.btnNextImagen.Text = ">";
+            this.btnNextImagen.UseVisualStyleBackColor = true;
+            this.btnNextImagen.Click += new System.EventHandler(this.btnNextImagen_Click);
+            // 
             // FormAgregarArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(790, 421);
-            this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.picbArticulos);
+            this.Controls.Add(this.btnNextImagen);
+            this.Controls.Add(this.btnPrevImagen);
+            this.Controls.Add(this.pictureBoxImagen);
+            this.Controls.Add(this.btnSeleccionarImagen);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.txtDescripcion);
@@ -289,16 +300,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar artículo";
             this.Load += new System.EventHandler(this.FormAgregarArt_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picbArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPrev;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.PictureBox picbArticulos;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.TextBox txtDescripcion;
@@ -315,5 +323,9 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCodArt;
+        private System.Windows.Forms.Button btnSeleccionarImagen;
+        private System.Windows.Forms.PictureBox pictureBoxImagen;
+        private System.Windows.Forms.Button btnPrevImagen;
+        private System.Windows.Forms.Button btnNextImagen;
     }
 }

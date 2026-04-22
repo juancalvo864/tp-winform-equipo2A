@@ -26,7 +26,11 @@ namespace TPWinForm_equipo_2A
         private void agregarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAgregarArt formAgregarArt = new FormAgregarArt();
-            formAgregarArt.ShowDialog();
+            if (formAgregarArt.ShowDialog() == DialogResult.OK)
+            {
+                FormListadoArt formListadoArt = new FormListadoArt();
+                formListadoArt.ShowDialog();
+            }
         }
 
         private void agregaMarcaToolStripMenuItem_Click(object sender, EventArgs e)

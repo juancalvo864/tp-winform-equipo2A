@@ -26,7 +26,8 @@ namespace TPWinForm_equipo_2A
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregarArt formAgregarArt = new FormAgregarArt();
-            formAgregarArt.ShowDialog();
+            if (formAgregarArt.ShowDialog() == DialogResult.OK)
+                Cargar();
         }
 
         private void btnDetalles_Click(object sender, EventArgs e)
@@ -84,6 +85,9 @@ namespace TPWinForm_equipo_2A
 
                 if (urlsImagenes.Count > 0)
                     CargarImagen(urlsImagenes[0]);
+                else
+                    picbArtiuclos.Image = TPWinForm_equipo_2A.Properties.Resources.placeholder;
+
                 ActualizarVisibilidadBotones();
             }
         }
@@ -108,8 +112,9 @@ namespace TPWinForm_equipo_2A
 
         private void ActualizarVisibilidadBotones()
         {
-            btnPrev.Visible = urlsImagenes.Count > 1;
-            btnNext.Visible = urlsImagenes.Count > 1;
+            bool hayVariasImagenes = urlsImagenes.Count > 1;
+            btnPrev.Enabled = hayVariasImagenes;
+            btnNext.Enabled = hayVariasImagenes;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
