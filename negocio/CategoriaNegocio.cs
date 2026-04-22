@@ -97,5 +97,29 @@ namespace negocio
                 throw ex;
             }
         }
+
+        public bool ExisteCategoria(string descripcion)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(*) FROM CATEGORIAS WHERE Descripcion = @Descripcion");
+                datos.setearParametro("@Descripcion", descripcion);
+                datos.ejecutarLectura();
+                if (datos.Lector.Read())
+                {
+                    return (int)datos.Lector[0] > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
