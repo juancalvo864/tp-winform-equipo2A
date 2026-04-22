@@ -156,5 +156,50 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Articulo> Buscar(string texto, int? idMarca, int? idCategoria)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta(@"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio,
+                               M.Descripcion AS Marca, M.Id AS IdMarca,
+                               C.Descripcion AS Categoria, C.Id AS IdCategoria
+                               FROM ARTICULOS A
+                               INNER JOIN MARCAS M ON A.IdMarca = M.Id
+                               INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE (@Texto IS NULL OR A.Nombre LIKE @Texto OR A.Codigo LIKE @Texto) AND (@IdMarca IS NULL OR A.IdMarca = @IdMarca) AND (@IdCategoria IS NULL OR A.IdCategoria = @IdCategoria)");
+
+                datos.setearParametro("@Texto", string.IsNullOrWhiteSpace(texto) ? (object)DBNull.Value : "%" + texto.Trim() + "%");
+                datos.setearParametro("@IdMarca", idMarca.HasValue ? (object)idMarca.Value : DBNull.Value);
+                datos.setearParametro("@IdCategoria", idCategoria.HasValue ? (object)idCategoria.Value : DBNull.Value);
+
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo articulo = new Articulo();
+                    articulo.Id = (int)datos.Lector["Id"];
+                    articulo.Codigo = (string)datos.Lector["Codigo"];
+                    articulo.Nombre = (string)datos.Lector["Nombre"];
+                    articulo.Descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.Precio = (decimal)datos.Lector["Precio"];
+                    articulo.Marca = new Marca();
+                    articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+
+                    lista.Add(articulo);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar: " + ex.Message);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

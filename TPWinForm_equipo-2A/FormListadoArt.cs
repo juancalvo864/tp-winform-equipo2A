@@ -119,8 +119,6 @@ namespace TPWinForm_equipo_2A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;    
             try
             {
                 if (dgvArticulos.CurrentRow == null)
@@ -128,6 +126,9 @@ namespace TPWinForm_equipo_2A
                     MessageBox.Show("Seleccioná un artículo primero.");
                     return;
                 }
+
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;    
 
                 DialogResult respuesta = MessageBox.Show("¿Seguro que querés eliminar el artículo?","Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
