@@ -16,5 +16,10 @@ namespace TPWinForm_equipo_2A
         {
             InitializeComponent();
         }
+
+        private void FormBusqueda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
