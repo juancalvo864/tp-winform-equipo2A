@@ -40,5 +40,35 @@ namespace TPWinForm_equipo_2A
             cbCategoria.DisplayMember = "Descripcion";
             cbCategoria.ValueMember = "Id";
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string texto = txtBuscar.Text;
+                int? idMarca = (int)cbMarca.SelectedValue == 0 ? (int?)null : (int)cbMarca.SelectedValue;
+                int? idCategoria = (int)cbCategoria.SelectedValue == 0 ? (int?)null : (int)cbCategoria.SelectedValue;
+
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                List<Articulo> resultados = negocio.Buscar(texto, idMarca, idCategoria);
+
+                if (resultados.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron artículos con esos criterios.");
+                }
+
+                dgvResultados.DataSource = resultados;
+                dgvResultados.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar: " + ex.Message);
+            }
+        }
     }
 }

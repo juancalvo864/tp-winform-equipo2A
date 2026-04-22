@@ -73,6 +73,7 @@
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "button1";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // button2
             // 
@@ -135,6 +136,7 @@
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "button1";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FormBusqueda
             // 
