@@ -49,6 +49,7 @@
             this.btnAgregar.TabIndex = 48;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCancelar
             // 
@@ -74,7 +75,7 @@
             this.txtbCategoria.Location = new System.Drawing.Point(66, 97);
             this.txtbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbCategoria.Name = "txtbCategoria";
-            this.txtbCategoria.Size = new System.Drawing.Size(496, 26);
+            this.txtbCategoria.Size = new System.Drawing.Size(496, 20);
             this.txtbCategoria.TabIndex = 47;
             // 
             // lblCategoria
@@ -84,7 +85,7 @@
             this.lblCategoria.Location = new System.Drawing.Point(188, 43);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(233, 25);
+            this.lblCategoria.Size = new System.Drawing.Size(170, 17);
             this.lblCategoria.TabIndex = 46;
             this.lblCategoria.Text = "Ingresar nueva categoría:";
             // 
@@ -103,6 +104,7 @@
             this.Name = "FormAgregarCat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar categoría";
+            this.Load += new System.EventHandler(this.FormAgregarCat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

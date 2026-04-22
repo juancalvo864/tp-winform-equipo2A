@@ -75,5 +75,19 @@ namespace TPWinForm_equipo_2A
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvCategorias.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccioná una categoría primero.");
+                return;
+            }
+
+            Categoria categoriaSeleccionada = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            FormAgregarCat form = new FormAgregarCat(categoriaSeleccionada);
+            form.ShowDialog();
+            Cargar();
+        }
     }
 }
