@@ -49,14 +49,14 @@ namespace negocio
         }
 
       
-        public void Agregar(Articulo art)
+        public int Agregar(Articulo art)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta("insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
                                      "values(@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); " +
-                                     "insert into IMAGENES(IdArticulo, ImagenUrl) values(SCOPE_IDENTITY(), @UrlImagen)");
+                                     "select cast(SCOPE_IDENTITY() as int)");
                 
                 datos.setearParametro("@Codigo", art.Codigo);
                 datos.setearParametro("@Nombre", art.Nombre);
@@ -64,9 +64,8 @@ namespace negocio
                 datos.setearParametro("@IdMarca", art.Marca.Id);
                 datos.setearParametro("@IdCategoria", art.Categoria.Id);
                 datos.setearParametro("@Precio", art.Precio);
-                datos.setearParametro("@UrlImagen", art.Imagen.ImagenUrl);
 
-                datos.ejecutarAccion();
+                return (int)datos.ejecutarEscalar();
             }
             catch (Exception ex)
             {

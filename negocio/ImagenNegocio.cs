@@ -15,7 +15,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArticulo");
+                datos.setearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArticulo ORDER BY Id ASC");
                 datos.setearParametro("@IdArticulo", idArticulo);
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())

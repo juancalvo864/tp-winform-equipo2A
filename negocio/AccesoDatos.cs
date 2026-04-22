@@ -18,7 +18,7 @@ namespace negocio
         }
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=JC-PC; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
         public void setearConsulta(string consulta)
@@ -52,6 +52,21 @@ namespace negocio
             {
                 conexion.Open();
                 comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public object ejecutarEscalar()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                return comando.ExecuteScalar();
             }
             catch (Exception ex)
             {
