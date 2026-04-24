@@ -17,7 +17,7 @@ namespace negocio
 
             try
 			{
-				datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria from ARTICULOS A inner join MARCAS M on A.IdMarca = M.Id inner join CATEGORIAS C on A.IdCategoria = C.Id");
+				datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, A.IdMarca, A.IdCategoria from ARTICULOS A inner join MARCAS M on A.IdMarca = M.Id inner join CATEGORIAS C on A.IdCategoria = C.Id");
 				datos.ejecutarLectura();
 
 				while (datos.Lector.Read())
@@ -28,8 +28,10 @@ namespace negocio
                     articulo.Nombre = (string)datos.Lector["Nombre"];
                     articulo.Descripcion = (string)datos.Lector["Descripcion"];
                     articulo.Marca = new Marca();
+                    articulo.Marca.Id = (int)datos.Lector["IdMarca"];   
                     articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
                     articulo.Categoria = new Categoria();
+                    articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     articulo.Precio = (decimal)datos.Lector["Precio"];
                     articulo.Imagen = new Imagen();
@@ -78,6 +80,33 @@ namespace negocio
             }
         }
 
+
+        public void Modificar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE Articulos SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id");
+
+                datos.setearParametro("@Codigo", art.Codigo);
+                datos.setearParametro("@Nombre", art.Nombre);
+                datos.setearParametro("@Descripcion", art.Descripcion);
+                datos.setearParametro("@IdMarca", art.Marca.Id);
+                datos.setearParametro("@IdCategoria", art.Categoria.Id);
+                datos.setearParametro("@Precio", art.Precio);
+                datos.setearParametro("@Id", art.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public void Eliminar(int id)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -128,27 +157,28 @@ namespace negocio
             }
         }
 
-        public bool ExisteCodigo(string codigo)
+        public bool ExisteCodigo(string codigo, int idArticulo = 0)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
+                datos.setearConsulta("SELECT COUNT(*) FROM Articulos WHERE Codigo = @Codigo AND Id <> @Id");
                 datos.setearParametro("@Codigo", codigo);
+                datos.setearParametro("@Id", idArticulo);
+
                 datos.ejecutarLectura();
 
                 if (datos.Lector.Read())
                 {
-                    return (int)datos.Lector[0] > 0;
+                    return Convert.ToInt32(datos.Lector[0]) > 0;
                 }
 
                 return false;
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                throw;
             }
             finally
             {
@@ -198,6 +228,93 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public List<Articulo> Filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria, A.IdMarca, A.IdCategoria from ARTICULOS A inner join MARCAS M on A.IdMarca = M.Id inner join CATEGORIAS C on A.IdCategoria = C.Id and ";
+                if(campo == "Precio")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "A.Precio > "+  filtro;
+                            break;
+                        case "Menor a":
+                            consulta += "A.Precio < " + filtro;
+                            break;
+                        default :
+                            consulta += "A.Precio = " + filtro;
+                            break;  
+                    }
+                }
+                else if(campo == "Código")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "Codigo like '" + filtro + "%' " ;
+                            break;
+                        case "Termina con":
+                            consulta += "Codigo like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "Codigo like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else
+                {
+                    switch(criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "A.Nombre like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "A.Nombre like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "A.Nombre like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo articulo = new Articulo();
+                    articulo.Id = (int)datos.Lector["Id"];
+                    articulo.Codigo = (string)datos.Lector["Codigo"];
+                    articulo.Nombre = (string)datos.Lector["Nombre"];
+                    articulo.Descripcion = (string)datos.Lector["Descripcion"];
+                    articulo.Marca = new Marca();
+                    articulo.Marca.Id = (int)datos.Lector["IdMarca"];
+                    articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    articulo.Precio = (decimal)datos.Lector["Precio"];
+                    articulo.Imagen = new Imagen();
+                    lista.Add(articulo);
+                }
+
+                return lista;   
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion(); 
             }
         }
     }

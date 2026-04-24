@@ -46,10 +46,11 @@ namespace TPWinForm_equipo_2A
             dgvArticulos.RowHeadersVisible = false;
             dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.##";
-            cbCampo.Items.Add("Nombre");
-            cbCampo.Items.Add("Marca");
-            cbCampo.Items.Add("Categoria");
-            cbCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Código");
+            cboCampo.Items.Add("Nombre");
+
+
+
         }
 
         private void Cargar()
@@ -163,6 +164,46 @@ namespace TPWinForm_equipo_2A
 
             if (modificar.ShowDialog() == DialogResult.OK)
                 Cargar();
+        }
+
+        private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();   
+            if(opcion == "Precio")
+            {
+                cboCriterio.Items.Clear();  
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();  
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termian con");
+                cboCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();    
+            try
+            {
+                string campo = cboCampo.SelectedItem?.ToString();
+                string criterio = cboCriterio.SelectedItem?.ToString();
+                string filtro = txtFiltro.Text.Trim();
+
+                dgvArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+          
+
         }
     }
 }

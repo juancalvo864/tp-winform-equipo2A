@@ -27,6 +27,8 @@ namespace TPWinForm_equipo_2A
         public FormAgregarArt(Articulo articulo)
         {
             InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Artículo";    
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -36,12 +38,12 @@ namespace TPWinForm_equipo_2A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo nuevoArt = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
                 decimal precio;
+
 
                 if (string.IsNullOrWhiteSpace(txtCodArt.Text))
                 {
@@ -59,7 +61,14 @@ namespace TPWinForm_equipo_2A
                     return;
                 }
                 
-                if (negocio.ExisteCodigo(txtCodArt.Text.Trim()))
+ 
+                if(articulo == null)
+                {
+                    articulo = new Articulo();
+
+                }
+
+                if (negocio.ExisteCodigo(txtCodArt.Text.Trim(), articulo.Id))
                 {
                     MessageBox.Show("Ya existe un artículo con ese código.");
                     txtCodArt.Clear();
@@ -67,19 +76,27 @@ namespace TPWinForm_equipo_2A
                     return;
                 }
 
-                nuevoArt.Codigo = txtCodArt.Text.Trim();
-                nuevoArt.Nombre = txtNombre.Text;
-                nuevoArt.Descripcion = txtDescripcion.Text; 
-                nuevoArt.Precio = precio;
-                nuevoArt.Marca = new Marca();
-                nuevoArt.Marca.Id = (int)cboxMarca.SelectedValue;
-                nuevoArt.Categoria = new Categoria();
-                nuevoArt.Categoria.Id = (int)cboxCategoria.SelectedValue;
+                articulo.Codigo = txtCodArt.Text.Trim();
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text; 
+                articulo.Precio = precio;
+                articulo.Marca = new Marca();
+                articulo.Marca.Id = (int)cboxMarca.SelectedValue;
+                articulo.Categoria = new Categoria();
+                articulo.Categoria.Id = (int)cboxCategoria.SelectedValue;
 
-                int idArticulo = negocio.Agregar(nuevoArt);
-                GuardarImagenesSeleccionadas(idArticulo);
+                if(articulo.Id != 0)
+                {
+                    negocio.Modificar(articulo);
+                    MessageBox.Show("Artículo modificado exitosamente.");
+                }
+                else
+                {
+                    int idArticulo = negocio.Agregar(articulo);
+                    GuardarImagenesSeleccionadas(idArticulo);
+                    MessageBox.Show("Artículo agregado exitosamente.");
+                }
 
-                MessageBox.Show("Artículo agregado exitosamente.");
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -105,6 +122,17 @@ namespace TPWinForm_equipo_2A
                 cboxCategoria.ValueMember = "Id";
                 cboxCategoria.DisplayMember = "Descripcion";
                 cboxCategoria.SelectedIndex = -1;
+
+                if(articulo != null)
+                {
+                    txtCodArt.Text = articulo.Codigo;   
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion; 
+                    txtPrecio.Text = articulo.Precio.ToString("0.##");  
+                    cboxMarca.SelectedValue = articulo.Marca.Id;  
+                    cboxCategoria.SelectedValue = articulo.Categoria.Id;
+               
+                }
             
             }
             catch (Exception ex)

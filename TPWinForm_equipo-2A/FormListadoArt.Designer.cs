@@ -36,8 +36,8 @@
             this.lblERROR = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.cbCriterio = new System.Windows.Forms.ComboBox();
-            this.cbCampo = new System.Windows.Forms.ComboBox();
+            this.cboCriterio = new System.Windows.Forms.ComboBox();
+            this.cboCampo = new System.Windows.Forms.ComboBox();
             this.picbArtiuclos = new System.Windows.Forms.PictureBox();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbArtiuclos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(150, 354);
+            this.label2.Location = new System.Drawing.Point(148, 346);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 37;
@@ -105,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 354);
+            this.label1.Location = new System.Drawing.Point(8, 346);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 36;
@@ -133,8 +134,9 @@
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(135, 27);
             this.btnFiltrar.TabIndex = 34;
-            this.btnFiltrar.Text = "FILTRAR";
+            this.btnFiltrar.Text = "BUSCAR";
             this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // txtFiltro
             // 
@@ -143,23 +145,24 @@
             this.txtFiltro.Size = new System.Drawing.Size(276, 26);
             this.txtFiltro.TabIndex = 33;
             // 
-            // cbCriterio
+            // cboCriterio
             // 
-            this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(153, 373);
-            this.cbCriterio.Name = "cbCriterio";
-            this.cbCriterio.Size = new System.Drawing.Size(121, 28);
-            this.cbCriterio.TabIndex = 32;
+            this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterio.FormattingEnabled = true;
+            this.cboCriterio.Location = new System.Drawing.Point(153, 373);
+            this.cboCriterio.Name = "cboCriterio";
+            this.cboCriterio.Size = new System.Drawing.Size(121, 28);
+            this.cboCriterio.TabIndex = 32;
             // 
-            // cbCampo
+            // cboCampo
             // 
-            this.cbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(13, 373);
-            this.cbCampo.Name = "cbCampo";
-            this.cbCampo.Size = new System.Drawing.Size(121, 28);
-            this.cbCampo.TabIndex = 31;
+            this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampo.FormattingEnabled = true;
+            this.cboCampo.Location = new System.Drawing.Point(13, 373);
+            this.cboCampo.Name = "cboCampo";
+            this.cboCampo.Size = new System.Drawing.Size(121, 28);
+            this.cboCampo.TabIndex = 31;
+            this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cbCampo_SelectedIndexChanged);
             // 
             // picbArtiuclos
             // 
@@ -282,10 +285,21 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(289, 346);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 25);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Filtro:";
+            // 
             // FormListadoArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(991, 408);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
@@ -295,8 +309,8 @@
             this.Controls.Add(this.lblERROR);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.txtFiltro);
-            this.Controls.Add(this.cbCriterio);
-            this.Controls.Add(this.cbCampo);
+            this.Controls.Add(this.cboCriterio);
+            this.Controls.Add(this.cboCampo);
             this.Controls.Add(this.picbArtiuclos);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.btnRefrescar);
@@ -329,8 +343,8 @@
         private System.Windows.Forms.Label lblERROR;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.TextBox txtFiltro;
-        private System.Windows.Forms.ComboBox cbCriterio;
-        private System.Windows.Forms.ComboBox cbCampo;
+        private System.Windows.Forms.ComboBox cboCriterio;
+        private System.Windows.Forms.ComboBox cboCampo;
         private System.Windows.Forms.PictureBox picbArtiuclos;
         private System.Windows.Forms.Button btnDetalles;
         private System.Windows.Forms.Button btnRefrescar;
@@ -339,5 +353,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label3;
     }
 }
