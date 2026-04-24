@@ -154,6 +154,15 @@ namespace TPWinForm_equipo_2A
             Cargar(); 
         }
 
-   
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado; 
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem; 
+
+            FormAgregarArt modificar = new FormAgregarArt(seleccionado);
+
+            if (modificar.ShowDialog() == DialogResult.OK)
+                Cargar();
+        }
     }
 }

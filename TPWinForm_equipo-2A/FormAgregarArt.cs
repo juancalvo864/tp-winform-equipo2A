@@ -18,7 +18,13 @@ namespace TPWinForm_equipo_2A
         private Articulo articulo = null;
         private List<string> rutasImagenesSeleccionadas = new List<string>();
         private int indiceImagenActual = 0;
+
         public FormAgregarArt()
+        {
+            InitializeComponent();
+        }
+
+        public FormAgregarArt(Articulo articulo)
         {
             InitializeComponent();
         }

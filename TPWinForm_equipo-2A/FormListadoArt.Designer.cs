@@ -251,6 +251,7 @@
             this.btnEditar.TabIndex = 24;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dgvArticulos
             // 
