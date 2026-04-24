@@ -193,11 +193,14 @@ namespace negocio
             try
             {
                 datos.setearConsulta(@"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio,
-                               M.Descripcion AS Marca, M.Id AS IdMarca,
-                               C.Descripcion AS Categoria, C.Id AS IdCategoria
+                               M.Descripcion AS Marca, A.IdMarca,
+                               C.Descripcion AS Categoria, A.IdCategoria
                                FROM ARTICULOS A
                                INNER JOIN MARCAS M ON A.IdMarca = M.Id
-                               INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE (@Texto IS NULL OR A.Nombre LIKE @Texto OR A.Codigo LIKE @Texto) AND (@IdMarca IS NULL OR A.IdMarca = @IdMarca) AND (@IdCategoria IS NULL OR A.IdCategoria = @IdCategoria)");
+                               INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id
+                               WHERE (@Texto IS NULL OR A.Codigo LIKE @Texto OR A.Nombre LIKE @Texto)
+                               AND (@IdMarca IS NULL OR A.IdMarca = @IdMarca)
+                               AND (@IdCategoria IS NULL OR A.IdCategoria = @IdCategoria)");
 
                 datos.setearParametro("@Texto", string.IsNullOrWhiteSpace(texto) ? (object)DBNull.Value : "%" + texto.Trim() + "%");
                 datos.setearParametro("@IdMarca", idMarca.HasValue ? (object)idMarca.Value : DBNull.Value);
@@ -213,9 +216,12 @@ namespace negocio
                     articulo.Descripcion = (string)datos.Lector["Descripcion"];
                     articulo.Precio = (decimal)datos.Lector["Precio"];
                     articulo.Marca = new Marca();
+                    articulo.Marca.Id = (int)datos.Lector["IdMarca"];
                     articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
                     articulo.Categoria = new Categoria();
+                    articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    articulo.Imagen = new Imagen();
 
                     lista.Add(articulo);
                 }
@@ -277,6 +283,9 @@ namespace negocio
                             break;
                         case "Termina con":
                             consulta += "A.Nombre like '%" + filtro + "'";
+                            break;
+                        case "Contiene":
+                            consulta += "A.Nombre like '%" + filtro + "%'";
                             break;
                         default:
                             consulta += "A.Nombre like '%" + filtro + "%'";

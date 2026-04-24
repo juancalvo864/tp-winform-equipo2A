@@ -22,6 +22,7 @@ namespace TPWinForm_equipo_2A
         private void FormBusqueda_Load(object sender, EventArgs e)
         {
             CargarCombos();
+            ConfigurarGrilla();
         }
 
         private void CargarCombos()
@@ -63,7 +64,7 @@ namespace TPWinForm_equipo_2A
                 }
 
                 dgvResultados.DataSource = resultados;
-                dgvResultados.Columns["Id"].Visible = false;
+                ConfigurarGrilla();
             }
             catch (Exception ex)
             {
@@ -86,6 +87,30 @@ namespace TPWinForm_equipo_2A
                 Articulo seleccionado = (Articulo)dgvResultados.Rows[e.RowIndex].DataBoundItem;
                 FormDetalleArt formDetalle = new FormDetalleArt(seleccionado);
                 formDetalle.ShowDialog();
+            }
+        }
+
+        private void ConfigurarGrilla()
+        {
+            dgvResultados.RowHeadersVisible = false;
+            dgvResultados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dgvResultados.Columns["Id"] != null)
+                dgvResultados.Columns["Id"].Visible = false;
+
+            if (dgvResultados.Columns["Imagen"] != null)
+                dgvResultados.Columns["Imagen"].Visible = false;
+
+            if (dgvResultados.Columns["Precio"] != null)
+                dgvResultados.Columns["Precio"].DefaultCellStyle.Format = "0.##";
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnBuscar.PerformClick();
+                e.SuppressKeyPress = true;
             }
         }
     }
