@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblERROR = new System.Windows.Forms.Label();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.cboCriterio = new System.Windows.Forms.ComboBox();
             this.cboCampo = new System.Windows.Forms.ComboBox();
@@ -47,6 +46,7 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbArtiuclos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
@@ -121,22 +121,6 @@
             this.lblERROR.Name = "lblERROR";
             this.lblERROR.Size = new System.Drawing.Size(0, 25);
             this.lblERROR.TabIndex = 35;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnFiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(576, 364);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(135, 33);
-            this.btnFiltrar.TabIndex = 34;
-            this.btnFiltrar.Text = "BUSCAR";
-            this.btnFiltrar.UseVisualStyleBackColor = false;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // txtFiltro
             // 
@@ -294,6 +278,24 @@
             this.label3.Size = new System.Drawing.Size(56, 25);
             this.label3.TabIndex = 42;
             this.label3.Text = "Filtro:";
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.Image = global::TPWinForm_equipo_2A.Properties.Resources.lupa;
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(576, 349);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(123, 48);
+            this.btnFiltrar.TabIndex = 34;
+            this.btnFiltrar.Text = "BUSCAR";
+            this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // FormListadoArt
             // 

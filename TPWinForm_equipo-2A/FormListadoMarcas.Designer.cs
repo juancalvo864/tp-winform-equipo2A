@@ -87,6 +87,8 @@
             this.btnFiltrarMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnFiltrarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrarMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrarMarca.Image = global::TPWinForm_equipo_2A.Properties.Resources.lupa;
+            this.btnFiltrarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltrarMarca.Location = new System.Drawing.Point(229, 334);
             this.btnFiltrarMarca.Name = "btnFiltrarMarca";
             this.btnFiltrarMarca.Size = new System.Drawing.Size(135, 32);

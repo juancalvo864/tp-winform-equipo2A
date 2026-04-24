@@ -71,6 +71,8 @@
             this.btnFiltrarCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnFiltrarCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrarCat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrarCat.Image = global::TPWinForm_equipo_2A.Properties.Resources.lupa;
+            this.btnFiltrarCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFiltrarCat.Location = new System.Drawing.Point(229, 327);
             this.btnFiltrarCat.Name = "btnFiltrarCat";
             this.btnFiltrarCat.Size = new System.Drawing.Size(135, 34);

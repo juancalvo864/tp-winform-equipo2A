@@ -166,5 +166,10 @@
   <ItemGroup>
     <None Include="Resources\placeholder.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
