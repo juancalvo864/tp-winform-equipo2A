@@ -32,8 +32,8 @@
             this.lblCampoCategoria = new System.Windows.Forms.Label();
             this.btnFiltrarCat = new System.Windows.Forms.Button();
             this.txtFiltrarCat = new System.Windows.Forms.TextBox();
-            this.cbCriterioCat = new System.Windows.Forms.ComboBox();
-            this.cbCampoCat = new System.Windows.Forms.ComboBox();
+            this.cboCriterioCat = new System.Windows.Forms.ComboBox();
+            this.cboCampoCat = new System.Windows.Forms.ComboBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.lblCriterioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriterioCategoria.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioCategoria.Name = "lblCriterioCategoria";
-            this.lblCriterioCategoria.Size = new System.Drawing.Size(61, 16);
+            this.lblCriterioCategoria.Size = new System.Drawing.Size(89, 25);
             this.lblCriterioCategoria.TabIndex = 46;
             this.lblCriterioCategoria.Text = "Criterio:";
             // 
@@ -59,7 +59,7 @@
             this.lblCampoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCampoCategoria.Location = new System.Drawing.Point(11, 327);
             this.lblCampoCategoria.Name = "lblCampoCategoria";
-            this.lblCampoCategoria.Size = new System.Drawing.Size(60, 16);
+            this.lblCampoCategoria.Size = new System.Drawing.Size(88, 25);
             this.lblCampoCategoria.TabIndex = 45;
             this.lblCampoCategoria.Text = "Campo:";
             // 
@@ -75,33 +75,35 @@
             this.btnFiltrarCat.Name = "btnFiltrarCat";
             this.btnFiltrarCat.Size = new System.Drawing.Size(135, 27);
             this.btnFiltrarCat.TabIndex = 44;
-            this.btnFiltrarCat.Text = "FILTRAR";
+            this.btnFiltrarCat.Text = "BUSCAR";
             this.btnFiltrarCat.UseVisualStyleBackColor = false;
+            this.btnFiltrarCat.Click += new System.EventHandler(this.btnFiltrarCat_Click);
             // 
             // txtFiltrarCat
             // 
             this.txtFiltrarCat.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarCat.Name = "txtFiltrarCat";
-            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarCat.Size = new System.Drawing.Size(204, 26);
             this.txtFiltrarCat.TabIndex = 43;
             // 
-            // cbCriterioCat
+            // cboCriterioCat
             // 
-            this.cbCriterioCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCriterioCat.FormattingEnabled = true;
-            this.cbCriterioCat.Location = new System.Drawing.Point(118, 346);
-            this.cbCriterioCat.Name = "cbCriterioCat";
-            this.cbCriterioCat.Size = new System.Drawing.Size(97, 21);
-            this.cbCriterioCat.TabIndex = 42;
+            this.cboCriterioCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterioCat.FormattingEnabled = true;
+            this.cboCriterioCat.Location = new System.Drawing.Point(118, 346);
+            this.cboCriterioCat.Name = "cboCriterioCat";
+            this.cboCriterioCat.Size = new System.Drawing.Size(97, 28);
+            this.cboCriterioCat.TabIndex = 42;
             // 
-            // cbCampoCat
+            // cboCampoCat
             // 
-            this.cbCampoCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCampoCat.FormattingEnabled = true;
-            this.cbCampoCat.Location = new System.Drawing.Point(11, 346);
-            this.cbCampoCat.Name = "cbCampoCat";
-            this.cbCampoCat.Size = new System.Drawing.Size(94, 21);
-            this.cbCampoCat.TabIndex = 41;
+            this.cboCampoCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampoCat.FormattingEnabled = true;
+            this.cboCampoCat.Location = new System.Drawing.Point(11, 346);
+            this.cboCampoCat.Name = "cboCampoCat";
+            this.cboCampoCat.Size = new System.Drawing.Size(94, 28);
+            this.cboCampoCat.TabIndex = 41;
+            this.cboCampoCat.SelectedIndexChanged += new System.EventHandler(this.cboCampoCat_SelectedIndexChanged);
             // 
             // btnRefrescar
             // 
@@ -117,6 +119,7 @@
             this.btnRefrescar.TabIndex = 39;
             this.btnRefrescar.Text = "REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // btnAgregar
             // 
@@ -203,8 +206,8 @@
             this.Controls.Add(this.lblCampoCategoria);
             this.Controls.Add(this.btnFiltrarCat);
             this.Controls.Add(this.txtFiltrarCat);
-            this.Controls.Add(this.cbCriterioCat);
-            this.Controls.Add(this.cbCampoCat);
+            this.Controls.Add(this.cboCriterioCat);
+            this.Controls.Add(this.cboCampoCat);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
@@ -230,8 +233,8 @@
         private System.Windows.Forms.Label lblCampoCategoria;
         private System.Windows.Forms.Button btnFiltrarCat;
         private System.Windows.Forms.TextBox txtFiltrarCat;
-        private System.Windows.Forms.ComboBox cbCriterioCat;
-        private System.Windows.Forms.ComboBox cbCampoCat;
+        private System.Windows.Forms.ComboBox cboCriterioCat;
+        private System.Windows.Forms.ComboBox cboCampoCat;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;

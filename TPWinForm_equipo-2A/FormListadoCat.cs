@@ -34,6 +34,8 @@ namespace TPWinForm_equipo_2A
         private void FormListadoCat_Load(object sender, EventArgs e)
         {
             Cargar();
+            cboCampoCat.Items.Add("Descripcion");
+            cboCampoCat.SelectedIndex = 0;
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -88,6 +90,51 @@ namespace TPWinForm_equipo_2A
             FormAgregarCat form = new FormAgregarCat(categoriaSeleccionada);
             form.ShowDialog();
             Cargar();
+        }
+
+        private void cboCampoCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampoCat.SelectedItem.ToString();
+            if (opcion == "Numero")
+            {
+                cboCriterioCat.Items.Clear();
+                cboCriterioCat.Items.Add("Mayor a");
+                cboCriterioCat.Items.Add("Menor a");
+                cboCriterioCat.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterioCat.Items.Clear();
+                cboCriterioCat.Items.Add("Comienza con");
+                cboCriterioCat.Items.Add("Termina con");
+                cboCriterioCat.Items.Add("Contiene");
+            }
+
+        }
+
+        private void btnFiltrarCat_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            try
+            {
+                string campo = cboCampoCat.SelectedItem?.ToString();
+                string criterio = cboCriterioCat.SelectedItem?.ToString();
+                string filtro = txtFiltrarCat.Text.Trim();
+
+                dgvCategorias.DataSource = negocio.Filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
+        {
+            Cargar();
+
         }
     }
 }

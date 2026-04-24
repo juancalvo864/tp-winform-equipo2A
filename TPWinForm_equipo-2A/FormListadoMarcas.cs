@@ -34,6 +34,9 @@ namespace TPWinForm_equipo_2A
         private void FormListadoMarcas_Load(object sender, EventArgs e)
         {
             Cargar();
+            cboCampoMarca.Items.Add("Descripcion");
+            cboCampoMarca.SelectedIndex = 0;
+
         }
 
         private void Cargar()
@@ -89,6 +92,44 @@ namespace TPWinForm_equipo_2A
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cboCampoMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampoMarca.SelectedItem.ToString();
+            if (opcion == "Numero")
+            {
+                cboCriterioMarca.Items.Clear();
+                cboCriterioMarca.Items.Add("Mayor a");
+                cboCriterioMarca.Items.Add("Menor a");
+                cboCriterioMarca.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterioMarca.Items.Clear();
+                cboCriterioMarca.Items.Add("Comienza con");
+                cboCriterioMarca.Items.Add("Termina con");
+                cboCriterioMarca.Items.Add("Contiene");
+            }
+        }
+
+        private void btnFiltrarMarca_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                string campo = cboCampoMarca.SelectedItem?.ToString();
+                string criterio = cboCriterioMarca.SelectedItem?.ToString();
+                string filtro = txtFiltrarMarca.Text.Trim();
+
+                dgvMarcas.DataSource = negocio.Filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
             }
         }
     }

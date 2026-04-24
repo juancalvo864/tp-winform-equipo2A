@@ -33,8 +33,8 @@
             this.lblCampoMarca = new System.Windows.Forms.Label();
             this.btnFiltrarMarca = new System.Windows.Forms.Button();
             this.txtFiltrarMarca = new System.Windows.Forms.TextBox();
-            this.cbCriterioMarca = new System.Windows.Forms.ComboBox();
-            this.cbCampoMarca = new System.Windows.Forms.ComboBox();
+            this.cboCriterioMarca = new System.Windows.Forms.ComboBox();
+            this.cboCampoMarca = new System.Windows.Forms.ComboBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -63,9 +63,9 @@
             // 
             this.lblCriterioMarca.AutoSize = true;
             this.lblCriterioMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriterioMarca.Location = new System.Drawing.Point(118, 327);
+            this.lblCriterioMarca.Location = new System.Drawing.Point(113, 318);
             this.lblCriterioMarca.Name = "lblCriterioMarca";
-            this.lblCriterioMarca.Size = new System.Drawing.Size(61, 16);
+            this.lblCriterioMarca.Size = new System.Drawing.Size(89, 25);
             this.lblCriterioMarca.TabIndex = 58;
             this.lblCriterioMarca.Text = "Criterio:";
             // 
@@ -73,9 +73,9 @@
             // 
             this.lblCampoMarca.AutoSize = true;
             this.lblCampoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampoMarca.Location = new System.Drawing.Point(11, 327);
+            this.lblCampoMarca.Location = new System.Drawing.Point(12, 318);
             this.lblCampoMarca.Name = "lblCampoMarca";
-            this.lblCampoMarca.Size = new System.Drawing.Size(60, 16);
+            this.lblCampoMarca.Size = new System.Drawing.Size(88, 25);
             this.lblCampoMarca.TabIndex = 57;
             this.lblCampoMarca.Text = "Campo:";
             // 
@@ -91,33 +91,35 @@
             this.btnFiltrarMarca.Name = "btnFiltrarMarca";
             this.btnFiltrarMarca.Size = new System.Drawing.Size(135, 27);
             this.btnFiltrarMarca.TabIndex = 56;
-            this.btnFiltrarMarca.Text = "FILTRAR";
+            this.btnFiltrarMarca.Text = "BUSCAR";
             this.btnFiltrarMarca.UseVisualStyleBackColor = false;
+            this.btnFiltrarMarca.Click += new System.EventHandler(this.btnFiltrarMarca_Click);
             // 
             // txtFiltrarMarca
             // 
             this.txtFiltrarMarca.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarMarca.Name = "txtFiltrarMarca";
-            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 26);
             this.txtFiltrarMarca.TabIndex = 55;
             // 
-            // cbCriterioMarca
+            // cboCriterioMarca
             // 
-            this.cbCriterioMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCriterioMarca.FormattingEnabled = true;
-            this.cbCriterioMarca.Location = new System.Drawing.Point(118, 346);
-            this.cbCriterioMarca.Name = "cbCriterioMarca";
-            this.cbCriterioMarca.Size = new System.Drawing.Size(97, 21);
-            this.cbCriterioMarca.TabIndex = 54;
+            this.cboCriterioMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterioMarca.FormattingEnabled = true;
+            this.cboCriterioMarca.Location = new System.Drawing.Point(118, 346);
+            this.cboCriterioMarca.Name = "cboCriterioMarca";
+            this.cboCriterioMarca.Size = new System.Drawing.Size(97, 28);
+            this.cboCriterioMarca.TabIndex = 54;
             // 
-            // cbCampoMarca
+            // cboCampoMarca
             // 
-            this.cbCampoMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCampoMarca.FormattingEnabled = true;
-            this.cbCampoMarca.Location = new System.Drawing.Point(11, 346);
-            this.cbCampoMarca.Name = "cbCampoMarca";
-            this.cbCampoMarca.Size = new System.Drawing.Size(94, 21);
-            this.cbCampoMarca.TabIndex = 53;
+            this.cboCampoMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampoMarca.FormattingEnabled = true;
+            this.cboCampoMarca.Location = new System.Drawing.Point(11, 346);
+            this.cboCampoMarca.Name = "cboCampoMarca";
+            this.cboCampoMarca.Size = new System.Drawing.Size(94, 28);
+            this.cboCampoMarca.TabIndex = 53;
+            this.cboCampoMarca.SelectedIndexChanged += new System.EventHandler(this.cboCampoMarca_SelectedIndexChanged);
             // 
             // btnRefrescar
             // 
@@ -204,8 +206,8 @@
             this.Controls.Add(this.lblCampoMarca);
             this.Controls.Add(this.btnFiltrarMarca);
             this.Controls.Add(this.txtFiltrarMarca);
-            this.Controls.Add(this.cbCriterioMarca);
-            this.Controls.Add(this.cbCampoMarca);
+            this.Controls.Add(this.cboCriterioMarca);
+            this.Controls.Add(this.cboCampoMarca);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
@@ -232,8 +234,8 @@
         private System.Windows.Forms.Label lblCampoMarca;
         private System.Windows.Forms.Button btnFiltrarMarca;
         private System.Windows.Forms.TextBox txtFiltrarMarca;
-        private System.Windows.Forms.ComboBox cbCriterioMarca;
-        private System.Windows.Forms.ComboBox cbCampoMarca;
+        private System.Windows.Forms.ComboBox cboCriterioMarca;
+        private System.Windows.Forms.ComboBox cboCampoMarca;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;

@@ -127,5 +127,82 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Marca> Filtrar(string campo, string criterio, string filtro)
+        {
+            List<Marca> lista = new List<Marca>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "SELECT Id, Descripcion FROM MARCAS WHERE ";
+                //if (campo == "Numerico")
+                //{
+                //    switch (criterio)
+                //    {
+                //        case "Mayor a":
+                //            consulta += "A.Precio > " + filtro;
+                //            break;
+                //        case "Menor a":
+                //            consulta += "A.Precio < " + filtro;
+                //            break;
+                //        default:
+                //            consulta += "A.Precio = " + filtro;
+                //            break;
+                //    }
+                //}
+                if (campo == "Descripcion")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "Descripcion like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "Descripcion like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                //else
+                //{
+                //    switch (criterio)
+                //    {
+                //        case "Comienza con":
+                //            consulta += "A.Nombre like '" + filtro + "%' ";
+                //            break;
+                //        case "Termina con":
+                //            consulta += "A.Nombre like '%" + filtro + "'";
+                //            break;
+                //        default:
+                //            consulta += "A.Nombre like '%" + filtro + "%'";
+                //            break;
+                //    }
+                //}
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Marca marca = new Marca();
+                    marca.Id = (int)datos.Lector["Id"];
+                    marca.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(marca);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
