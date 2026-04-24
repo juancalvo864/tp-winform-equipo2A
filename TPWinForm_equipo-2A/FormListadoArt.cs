@@ -181,7 +181,7 @@ namespace TPWinForm_equipo_2A
             {
                 cboCriterio.Items.Clear();  
                 cboCriterio.Items.Add("Comienza con");
-                cboCriterio.Items.Add("Termian con");
+                cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
             }
         }

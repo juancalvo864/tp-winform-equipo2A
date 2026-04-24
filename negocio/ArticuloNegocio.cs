@@ -284,6 +284,9 @@ namespace negocio
                         case "Termina con":
                             consulta += "A.Nombre like '%" + filtro + "'";
                             break;
+                        case "Contiene":
+                            consulta += "A.Nombre like '%" + filtro + "%'";
+                            break;
                         default:
                             consulta += "A.Nombre like '%" + filtro + "%'";
                             break;
