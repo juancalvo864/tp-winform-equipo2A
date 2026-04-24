@@ -75,7 +75,7 @@
             this.txtbCategoria.Location = new System.Drawing.Point(11, 55);
             this.txtbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbCategoria.Name = "txtbCategoria";
-            this.txtbCategoria.Size = new System.Drawing.Size(352, 20);
+            this.txtbCategoria.Size = new System.Drawing.Size(352, 26);
             this.txtbCategoria.TabIndex = 47;
             // 
             // lblCategoria
@@ -85,13 +85,14 @@
             this.lblCategoria.Location = new System.Drawing.Point(110, 19);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(154, 12);
+            this.lblCategoria.Size = new System.Drawing.Size(246, 20);
             this.lblCategoria.TabIndex = 46;
             this.lblCategoria.Text = "INGRESAR NUEVA CATEGORÍA :";
             // 
             // FormAgregarCat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(378, 150);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);

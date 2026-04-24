@@ -200,6 +200,7 @@
             // FormListadoMarcas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(375, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCriterioMarca);

@@ -46,20 +46,20 @@
             // lblCriterioCategoria
             // 
             this.lblCriterioCategoria.AutoSize = true;
-            this.lblCriterioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriterioCategoria.Location = new System.Drawing.Point(118, 327);
+            this.lblCriterioCategoria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterioCategoria.Location = new System.Drawing.Point(113, 318);
             this.lblCriterioCategoria.Name = "lblCriterioCategoria";
-            this.lblCriterioCategoria.Size = new System.Drawing.Size(89, 25);
+            this.lblCriterioCategoria.Size = new System.Drawing.Size(73, 25);
             this.lblCriterioCategoria.TabIndex = 46;
             this.lblCriterioCategoria.Text = "Criterio:";
             // 
             // lblCampoCategoria
             // 
             this.lblCampoCategoria.AutoSize = true;
-            this.lblCampoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampoCategoria.Location = new System.Drawing.Point(11, 327);
+            this.lblCampoCategoria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoCategoria.Location = new System.Drawing.Point(12, 318);
             this.lblCampoCategoria.Name = "lblCampoCategoria";
-            this.lblCampoCategoria.Size = new System.Drawing.Size(88, 25);
+            this.lblCampoCategoria.Size = new System.Drawing.Size(74, 25);
             this.lblCampoCategoria.TabIndex = 45;
             this.lblCampoCategoria.Text = "Campo:";
             // 
@@ -70,10 +70,10 @@
             this.btnFiltrarCat.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnFiltrarCat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnFiltrarCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrarCat.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrarCat.Location = new System.Drawing.Point(229, 334);
+            this.btnFiltrarCat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrarCat.Location = new System.Drawing.Point(229, 327);
             this.btnFiltrarCat.Name = "btnFiltrarCat";
-            this.btnFiltrarCat.Size = new System.Drawing.Size(135, 27);
+            this.btnFiltrarCat.Size = new System.Drawing.Size(135, 34);
             this.btnFiltrarCat.TabIndex = 44;
             this.btnFiltrarCat.Text = "BUSCAR";
             this.btnFiltrarCat.UseVisualStyleBackColor = false;
@@ -112,10 +112,10 @@
             this.btnRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefrescar.Location = new System.Drawing.Point(229, 126);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(135, 27);
+            this.btnRefrescar.Size = new System.Drawing.Size(135, 33);
             this.btnRefrescar.TabIndex = 39;
             this.btnRefrescar.Text = "REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
@@ -128,10 +128,10 @@
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(229, 12);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 27);
+            this.btnAgregar.Size = new System.Drawing.Size(135, 33);
             this.btnAgregar.TabIndex = 38;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -144,10 +144,10 @@
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(229, 88);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(135, 27);
+            this.btnEliminar.Size = new System.Drawing.Size(135, 33);
             this.btnEliminar.TabIndex = 37;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -160,10 +160,10 @@
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(229, 50);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(135, 27);
+            this.btnEditar.Size = new System.Drawing.Size(135, 33);
             this.btnEditar.TabIndex = 36;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -188,10 +188,10 @@
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(229, 372);
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(229, 365);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(135, 27);
+            this.btnSalir.Size = new System.Drawing.Size(135, 34);
             this.btnSalir.TabIndex = 47;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -200,6 +200,7 @@
             // FormListadoCat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(375, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCriterioCategoria);

@@ -51,24 +51,24 @@
             // lblMarca2
             // 
             this.lblMarca2.AutoSize = true;
-            this.lblMarca2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca2.ForeColor = System.Drawing.Color.Black;
-            this.lblMarca2.Location = new System.Drawing.Point(13, 146);
+            this.lblMarca2.Location = new System.Drawing.Point(112, 123);
             this.lblMarca2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca2.Name = "lblMarca2";
-            this.lblMarca2.Size = new System.Drawing.Size(46, 14);
+            this.lblMarca2.Size = new System.Drawing.Size(70, 25);
             this.lblMarca2.TabIndex = 47;
             this.lblMarca2.Text = "Marca1";
             // 
             // lblCategoria2
             // 
             this.lblCategoria2.AutoSize = true;
-            this.lblCategoria2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria2.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria2.Location = new System.Drawing.Point(13, 199);
+            this.lblCategoria2.Location = new System.Drawing.Point(113, 176);
             this.lblCategoria2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria2.Name = "lblCategoria2";
-            this.lblCategoria2.Size = new System.Drawing.Size(63, 14);
+            this.lblCategoria2.Size = new System.Drawing.Size(98, 25);
             this.lblCategoria2.TabIndex = 46;
             this.lblCategoria2.Text = "Categoría1";
             // 
@@ -79,8 +79,9 @@
             this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(623, 379);
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrar.Location = new System.Drawing.Point(611, 377);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(154, 30);
@@ -92,50 +93,50 @@
             // lblPrecio2
             // 
             this.lblPrecio2.AutoSize = true;
-            this.lblPrecio2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio2.ForeColor = System.Drawing.Color.Black;
-            this.lblPrecio2.Location = new System.Drawing.Point(13, 252);
+            this.lblPrecio2.Location = new System.Drawing.Point(113, 226);
             this.lblPrecio2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(20, 14);
+            this.lblPrecio2.Size = new System.Drawing.Size(32, 25);
             this.lblPrecio2.TabIndex = 45;
             this.lblPrecio2.Text = "$1";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.Black;
             this.lblPrecio.Location = new System.Drawing.Point(13, 226);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(55, 15);
+            this.lblPrecio.Size = new System.Drawing.Size(69, 25);
             this.lblPrecio.TabIndex = 44;
-            this.lblPrecio.Text = "PRECIO :";
+            this.lblPrecio.Text = "Precio :";
             // 
             // lblNombre2
             // 
             this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre2.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre2.Location = new System.Drawing.Point(13, 93);
+            this.lblNombre2.Location = new System.Drawing.Point(112, 70);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(38, 14);
+            this.lblNombre2.Size = new System.Drawing.Size(61, 25);
             this.lblNombre2.TabIndex = 43;
             this.lblNombre2.Text = "Cosa1";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
             this.lblNombre.Location = new System.Drawing.Point(13, 67);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 15);
+            this.lblNombre.Size = new System.Drawing.Size(94, 28);
             this.lblNombre.TabIndex = 42;
-            this.lblNombre.Text = "NOMBRE :";
+            this.lblNombre.Text = "Nombre :";
             // 
             // pictureBox
             // 
@@ -151,50 +152,50 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
             this.lblCategoria.Location = new System.Drawing.Point(13, 173);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(73, 15);
+            this.lblCategoria.Size = new System.Drawing.Size(103, 28);
             this.lblCategoria.TabIndex = 40;
-            this.lblCategoria.Text = "CATEGORÍA";
+            this.lblCategoria.Text = "categoría :";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.Black;
             this.lblMarca.Location = new System.Drawing.Point(13, 120);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(55, 15);
+            this.lblMarca.Size = new System.Drawing.Size(75, 28);
             this.lblMarca.TabIndex = 39;
-            this.lblMarca.Text = "MARCA :";
+            this.lblMarca.Text = "Marca :";
             // 
             // lblCodArt2
             // 
             this.lblCodArt2.AutoSize = true;
-            this.lblCodArt2.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodArt2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodArt2.ForeColor = System.Drawing.Color.Black;
-            this.lblCodArt2.Location = new System.Drawing.Point(13, 40);
+            this.lblCodArt2.Location = new System.Drawing.Point(113, 17);
             this.lblCodArt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt2.Name = "lblCodArt2";
-            this.lblCodArt2.Size = new System.Drawing.Size(49, 14);
+            this.lblCodArt2.Size = new System.Drawing.Size(81, 25);
             this.lblCodArt2.TabIndex = 38;
             this.lblCodArt2.Text = "Codigo1";
             // 
             // lblCodArt
             // 
             this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodArt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodArt.ForeColor = System.Drawing.Color.Black;
             this.lblCodArt.Location = new System.Drawing.Point(13, 14);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(140, 15);
+            this.lblCodArt.Size = new System.Drawing.Size(86, 28);
             this.lblCodArt.TabIndex = 37;
-            this.lblCodArt.Text = "CÓDIGO DE ARTÍCULO :";
+            this.lblCodArt.Text = "Código :";
             // 
             // groupBox1
             // 
@@ -209,16 +210,16 @@
             this.groupBox1.Size = new System.Drawing.Size(380, 128);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DESCRIPCIÓN :";
+            this.groupBox1.Text = "Descripción :";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(9, 28);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(95, 14);
+            this.lblDescripcion.Size = new System.Drawing.Size(147, 25);
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "texto descripción";
             // 
@@ -232,7 +233,7 @@
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.Location = new System.Drawing.Point(462, 304);
             this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(135, 27);
+            this.btnPrev.Size = new System.Drawing.Size(135, 38);
             this.btnPrev.TabIndex = 50;
             this.btnPrev.Text = "<-";
             this.btnPrev.UseVisualStyleBackColor = true;
@@ -247,7 +248,7 @@
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(603, 304);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(135, 27);
+            this.btnNext.Size = new System.Drawing.Size(135, 38);
             this.btnNext.TabIndex = 49;
             this.btnNext.Text = "->";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -256,7 +257,8 @@
             // FormDetalleArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(790, 421);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(778, 421);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.groupBox1);

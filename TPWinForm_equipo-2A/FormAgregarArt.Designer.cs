@@ -57,7 +57,7 @@
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.ReadOnly = true;
-            this.txtUrlImagen.Size = new System.Drawing.Size(219, 20);
+            this.txtUrlImagen.Size = new System.Drawing.Size(219, 26);
             this.txtUrlImagen.TabIndex = 5;
             // 
             // lblImagen
@@ -67,7 +67,7 @@
             this.lblImagen.Location = new System.Drawing.Point(12, 248);
             this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(118, 12);
+            this.lblImagen.Size = new System.Drawing.Size(187, 20);
             this.lblImagen.TabIndex = 57;
             this.lblImagen.Text = "IMÁGEN DE ARTÍCULO :";
             // 
@@ -76,7 +76,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(12, 323);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(346, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(346, 26);
             this.txtDescripcion.TabIndex = 6;
             // 
             // txtPrecio
@@ -84,7 +84,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(12, 223);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(346, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(346, 26);
             this.txtPrecio.TabIndex = 4;
             // 
             // cboxCategoria
@@ -95,7 +95,7 @@
             this.cboxCategoria.Location = new System.Drawing.Point(12, 175);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxCategoria.Name = "cboxCategoria";
-            this.cboxCategoria.Size = new System.Drawing.Size(346, 21);
+            this.cboxCategoria.Size = new System.Drawing.Size(346, 28);
             this.cboxCategoria.TabIndex = 3;
             // 
             // cboxMarca
@@ -106,7 +106,7 @@
             this.cboxMarca.Location = new System.Drawing.Point(12, 127);
             this.cboxMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxMarca.Name = "cboxMarca";
-            this.cboxMarca.Size = new System.Drawing.Size(346, 21);
+            this.cboxMarca.Size = new System.Drawing.Size(346, 28);
             this.cboxMarca.TabIndex = 2;
             // 
             // txtNombre
@@ -114,7 +114,7 @@
             this.txtNombre.Location = new System.Drawing.Point(12, 80);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(346, 20);
+            this.txtNombre.Size = new System.Drawing.Size(346, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // txtCodArt
@@ -122,7 +122,7 @@
             this.txtCodArt.Location = new System.Drawing.Point(12, 33);
             this.txtCodArt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodArt.Name = "txtCodArt";
-            this.txtCodArt.Size = new System.Drawing.Size(346, 20);
+            this.txtCodArt.Size = new System.Drawing.Size(346, 26);
             this.txtCodArt.TabIndex = 0;
             // 
             // btnCancelar
@@ -166,7 +166,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(12, 201);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(46, 12);
+            this.lblPrecio.Size = new System.Drawing.Size(75, 20);
             this.lblPrecio.TabIndex = 55;
             this.lblPrecio.Text = "PRECIO :";
             // 
@@ -177,7 +177,7 @@
             this.lblNombre.Location = new System.Drawing.Point(12, 58);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(53, 12);
+            this.lblNombre.Size = new System.Drawing.Size(85, 20);
             this.lblNombre.TabIndex = 49;
             this.lblNombre.Text = "NOMBRE :";
             // 
@@ -188,7 +188,7 @@
             this.lblCategoria.Location = new System.Drawing.Point(12, 153);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(67, 12);
+            this.lblCategoria.Size = new System.Drawing.Size(106, 20);
             this.lblCategoria.TabIndex = 53;
             this.lblCategoria.Text = "CATEGORÍA :";
             // 
@@ -199,7 +199,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(12, 301);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(75, 12);
+            this.lblDescripcion.Size = new System.Drawing.Size(122, 20);
             this.lblDescripcion.TabIndex = 58;
             this.lblDescripcion.Text = "DESCRIPCIÓN :";
             // 
@@ -210,7 +210,7 @@
             this.lblMarca.Location = new System.Drawing.Point(12, 105);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(48, 12);
+            this.lblMarca.Size = new System.Drawing.Size(78, 20);
             this.lblMarca.TabIndex = 51;
             this.lblMarca.Text = "MARCA : ";
             // 
@@ -221,7 +221,7 @@
             this.lblCodArt.Location = new System.Drawing.Point(12, 11);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(116, 12);
+            this.lblCodArt.Size = new System.Drawing.Size(183, 20);
             this.lblCodArt.TabIndex = 0;
             this.lblCodArt.Text = "CÓDIGO DE ARTICULO :";
             // 
@@ -271,6 +271,7 @@
             // FormAgregarArt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(790, 421);
             this.Controls.Add(this.btnNextImagen);
             this.Controls.Add(this.btnPrevImagen);
