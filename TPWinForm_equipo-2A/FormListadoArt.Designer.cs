@@ -260,7 +260,7 @@
             // 
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 44);
+            this.dgvArticulos.Location = new System.Drawing.Point(13, 44);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.RowHeadersWidth = 62;

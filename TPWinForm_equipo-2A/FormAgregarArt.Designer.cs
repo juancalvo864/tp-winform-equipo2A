@@ -53,7 +53,7 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(12, 270);
+            this.txtUrlImagen.Location = new System.Drawing.Point(12, 325);
             this.txtUrlImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.ReadOnly = true;
@@ -63,17 +63,17 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(12, 248);
+            this.lblImagen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagen.Location = new System.Drawing.Point(14, 295);
             this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(187, 20);
+            this.lblImagen.Size = new System.Drawing.Size(200, 25);
             this.lblImagen.TabIndex = 57;
             this.lblImagen.Text = "IMÁGEN DE ARTÍCULO :";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(12, 323);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 381);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(346, 26);
@@ -81,7 +81,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(12, 223);
+            this.txtPrecio.Location = new System.Drawing.Point(12, 264);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(346, 26);
@@ -92,7 +92,7 @@
             this.cboxCategoria.BackColor = System.Drawing.Color.White;
             this.cboxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCategoria.FormattingEnabled = true;
-            this.cboxCategoria.Location = new System.Drawing.Point(12, 175);
+            this.cboxCategoria.Location = new System.Drawing.Point(12, 201);
             this.cboxCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxCategoria.Name = "cboxCategoria";
             this.cboxCategoria.Size = new System.Drawing.Size(346, 28);
@@ -103,7 +103,7 @@
             this.cboxMarca.BackColor = System.Drawing.Color.White;
             this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxMarca.FormattingEnabled = true;
-            this.cboxMarca.Location = new System.Drawing.Point(12, 127);
+            this.cboxMarca.Location = new System.Drawing.Point(12, 138);
             this.cboxMarca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(346, 28);
@@ -111,7 +111,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(12, 80);
+            this.txtNombre.Location = new System.Drawing.Point(12, 88);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(346, 26);
@@ -132,11 +132,11 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(644, 363);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(644, 372);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 27);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 35);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -149,11 +149,11 @@
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(501, 363);
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(501, 372);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 27);
+            this.btnAgregar.Size = new System.Drawing.Size(135, 35);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "ACEPTAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -162,75 +162,75 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(12, 201);
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(7, 234);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(75, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(81, 25);
             this.lblPrecio.TabIndex = 55;
             this.lblPrecio.Text = "PRECIO :";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(12, 58);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(85, 20);
+            this.lblNombre.Size = new System.Drawing.Size(94, 25);
             this.lblNombre.TabIndex = 49;
             this.lblNombre.Text = "NOMBRE :";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(12, 153);
+            this.lblCategoria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(7, 171);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(106, 20);
+            this.lblCategoria.Size = new System.Drawing.Size(115, 25);
             this.lblCategoria.TabIndex = 53;
             this.lblCategoria.Text = "CATEGORÍA :";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(12, 301);
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 351);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(122, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(133, 25);
             this.lblDescripcion.TabIndex = 58;
             this.lblDescripcion.Text = "DESCRIPCIÓN :";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(12, 105);
+            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(7, 111);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(78, 20);
+            this.lblMarca.Size = new System.Drawing.Size(88, 25);
             this.lblMarca.TabIndex = 51;
             this.lblMarca.Text = "MARCA : ";
             // 
             // lblCodArt
             // 
             this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodArt.Location = new System.Drawing.Point(12, 11);
+            this.lblCodArt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodArt.Location = new System.Drawing.Point(12, 3);
             this.lblCodArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(183, 20);
+            this.lblCodArt.Size = new System.Drawing.Size(202, 25);
             this.lblCodArt.TabIndex = 0;
             this.lblCodArt.Text = "CÓDIGO DE ARTICULO :";
             // 
             // btnSeleccionarImagen
             // 
-            this.btnSeleccionarImagen.Location = new System.Drawing.Point(239, 268);
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(239, 315);
             this.btnSeleccionarImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
-            this.btnSeleccionarImagen.Size = new System.Drawing.Size(119, 24);
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(119, 36);
             this.btnSeleccionarImagen.TabIndex = 68;
             this.btnSeleccionarImagen.Text = "Agregar";
             this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
