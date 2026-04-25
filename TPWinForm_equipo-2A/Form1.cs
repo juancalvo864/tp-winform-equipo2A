@@ -75,5 +75,6 @@ namespace TPWinForm_equipo_2A
             FormBusqueda formBusqueda = new FormBusqueda();
             formBusqueda.ShowDialog();
         }
+
     }
 }
