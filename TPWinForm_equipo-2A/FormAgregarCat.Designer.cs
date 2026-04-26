@@ -76,17 +76,17 @@
             this.txtbCategoria.Location = new System.Drawing.Point(11, 55);
             this.txtbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbCategoria.Name = "txtbCategoria";
-            this.txtbCategoria.Size = new System.Drawing.Size(352, 22);
+            this.txtbCategoria.Size = new System.Drawing.Size(352, 20);
             this.txtbCategoria.TabIndex = 1;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(83, 25);
+            this.lblCategoria.Location = new System.Drawing.Point(104, 25);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(208, 23);
+            this.lblCategoria.Size = new System.Drawing.Size(167, 19);
             this.lblCategoria.TabIndex = 0;
             this.lblCategoria.Text = "Ingresar nueva categoría :";
             // 

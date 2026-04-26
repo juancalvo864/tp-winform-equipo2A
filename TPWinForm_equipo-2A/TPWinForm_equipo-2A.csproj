@@ -210,5 +210,14 @@
   <ItemGroup>
     <None Include="Resources\info %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_icon_252111.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube256.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

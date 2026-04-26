@@ -76,17 +76,17 @@
             this.txtDescripcion.Location = new System.Drawing.Point(11, 55);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(352, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(352, 20);
             this.txtDescripcion.TabIndex = 1;
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(95, 25);
+            this.lblMarca.Location = new System.Drawing.Point(113, 25);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(184, 23);
+            this.lblMarca.Size = new System.Drawing.Size(148, 19);
             this.lblMarca.TabIndex = 0;
             this.lblMarca.Text = "Ingresar nueva marca :";
             // 
