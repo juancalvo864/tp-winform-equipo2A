@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoMarcas));
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblCriterioMarca = new System.Windows.Forms.Label();
             this.lblCampoMarca = new System.Windows.Forms.Label();
@@ -51,31 +52,31 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(229, 372);
+            this.btnSalir.Location = new System.Drawing.Point(229, 364);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(135, 32);
-            this.btnSalir.TabIndex = 59;
-            this.btnSalir.Text = "SALIR";
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "&SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblCriterioMarca
             // 
             this.lblCriterioMarca.AutoSize = true;
-            this.lblCriterioMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriterioMarca.Location = new System.Drawing.Point(113, 318);
+            this.lblCriterioMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterioMarca.Location = new System.Drawing.Point(118, 327);
             this.lblCriterioMarca.Name = "lblCriterioMarca";
-            this.lblCriterioMarca.Size = new System.Drawing.Size(73, 25);
+            this.lblCriterioMarca.Size = new System.Drawing.Size(54, 17);
             this.lblCriterioMarca.TabIndex = 58;
             this.lblCriterioMarca.Text = "Criterio:";
             // 
             // lblCampoMarca
             // 
             this.lblCampoMarca.AutoSize = true;
-            this.lblCampoMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampoMarca.Location = new System.Drawing.Point(12, 318);
+            this.lblCampoMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampoMarca.Location = new System.Drawing.Point(11, 326);
             this.lblCampoMarca.Name = "lblCampoMarca";
-            this.lblCampoMarca.Size = new System.Drawing.Size(74, 25);
+            this.lblCampoMarca.Size = new System.Drawing.Size(53, 17);
             this.lblCampoMarca.TabIndex = 57;
             this.lblCampoMarca.Text = "Campo:";
             // 
@@ -89,11 +90,11 @@
             this.btnFiltrarMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrarMarca.Image = global::TPWinForm_equipo_2A.Properties.Resources.lupa;
             this.btnFiltrarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrarMarca.Location = new System.Drawing.Point(229, 334);
+            this.btnFiltrarMarca.Location = new System.Drawing.Point(229, 326);
             this.btnFiltrarMarca.Name = "btnFiltrarMarca";
             this.btnFiltrarMarca.Size = new System.Drawing.Size(135, 32);
-            this.btnFiltrarMarca.TabIndex = 56;
-            this.btnFiltrarMarca.Text = "BUSCAR";
+            this.btnFiltrarMarca.TabIndex = 8;
+            this.btnFiltrarMarca.Text = "&BUSCAR";
             this.btnFiltrarMarca.UseVisualStyleBackColor = false;
             this.btnFiltrarMarca.Click += new System.EventHandler(this.btnFiltrarMarca_Click);
             // 
@@ -101,8 +102,8 @@
             // 
             this.txtFiltrarMarca.Location = new System.Drawing.Point(11, 376);
             this.txtFiltrarMarca.Name = "txtFiltrarMarca";
-            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 26);
-            this.txtFiltrarMarca.TabIndex = 55;
+            this.txtFiltrarMarca.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltrarMarca.TabIndex = 7;
             // 
             // cboCriterioMarca
             // 
@@ -110,8 +111,8 @@
             this.cboCriterioMarca.FormattingEnabled = true;
             this.cboCriterioMarca.Location = new System.Drawing.Point(118, 346);
             this.cboCriterioMarca.Name = "cboCriterioMarca";
-            this.cboCriterioMarca.Size = new System.Drawing.Size(97, 28);
-            this.cboCriterioMarca.TabIndex = 54;
+            this.cboCriterioMarca.Size = new System.Drawing.Size(97, 21);
+            this.cboCriterioMarca.TabIndex = 6;
             // 
             // cboCampoMarca
             // 
@@ -119,8 +120,8 @@
             this.cboCampoMarca.FormattingEnabled = true;
             this.cboCampoMarca.Location = new System.Drawing.Point(11, 346);
             this.cboCampoMarca.Name = "cboCampoMarca";
-            this.cboCampoMarca.Size = new System.Drawing.Size(94, 28);
-            this.cboCampoMarca.TabIndex = 53;
+            this.cboCampoMarca.Size = new System.Drawing.Size(94, 21);
+            this.cboCampoMarca.TabIndex = 5;
             this.cboCampoMarca.SelectedIndexChanged += new System.EventHandler(this.cboCampoMarca_SelectedIndexChanged);
             // 
             // btnRefrescar
@@ -134,8 +135,8 @@
             this.btnRefrescar.Location = new System.Drawing.Point(229, 126);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(135, 32);
-            this.btnRefrescar.TabIndex = 52;
-            this.btnRefrescar.Text = "REFRESCAR";
+            this.btnRefrescar.TabIndex = 4;
+            this.btnRefrescar.Text = "&REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
@@ -150,8 +151,8 @@
             this.btnAgregar.Location = new System.Drawing.Point(229, 12);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 32);
-            this.btnAgregar.TabIndex = 51;
-            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "&AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -166,8 +167,8 @@
             this.btnEliminar.Location = new System.Drawing.Point(229, 88);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 32);
-            this.btnEliminar.TabIndex = 50;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "&ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -182,27 +183,29 @@
             this.btnEditar.Location = new System.Drawing.Point(229, 50);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(135, 32);
-            this.btnEditar.TabIndex = 49;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.TabIndex = 2;
+            this.btnEditar.Text = "EDI&TAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dgvMarcas
             // 
+            this.dgvMarcas.AllowUserToResizeRows = false;
             this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.Location = new System.Drawing.Point(11, 12);
+            this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
             this.dgvMarcas.RowHeadersWidth = 62;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarcas.Size = new System.Drawing.Size(204, 299);
-            this.dgvMarcas.TabIndex = 48;
+            this.dgvMarcas.TabIndex = 0;
             // 
             // FormListadoMarcas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(375, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblCriterioMarca);
@@ -217,6 +220,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dgvMarcas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

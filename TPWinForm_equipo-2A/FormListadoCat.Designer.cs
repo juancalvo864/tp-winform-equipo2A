@@ -74,9 +74,9 @@
             this.btnFiltrarCat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrarCat.Image = global::TPWinForm_equipo_2A.Properties.Resources.lupa;
             this.btnFiltrarCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrarCat.Location = new System.Drawing.Point(229, 327);
+            this.btnFiltrarCat.Location = new System.Drawing.Point(229, 326);
             this.btnFiltrarCat.Name = "btnFiltrarCat";
-            this.btnFiltrarCat.Size = new System.Drawing.Size(135, 34);
+            this.btnFiltrarCat.Size = new System.Drawing.Size(135, 32);
             this.btnFiltrarCat.TabIndex = 8;
             this.btnFiltrarCat.Text = "&BUSCAR";
             this.btnFiltrarCat.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.btnRefrescar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefrescar.Location = new System.Drawing.Point(229, 126);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(135, 33);
+            this.btnRefrescar.Size = new System.Drawing.Size(135, 32);
             this.btnRefrescar.TabIndex = 4;
             this.btnRefrescar.Text = "&REFRESCAR";
             this.btnRefrescar.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(229, 12);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 33);
+            this.btnAgregar.Size = new System.Drawing.Size(135, 32);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "&AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(229, 88);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(135, 33);
+            this.btnEliminar.Size = new System.Drawing.Size(135, 32);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "&ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(229, 50);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(135, 33);
+            this.btnEditar.Size = new System.Drawing.Size(135, 32);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "EDI&TAR";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -194,9 +194,9 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(229, 365);
+            this.btnSalir.Location = new System.Drawing.Point(229, 364);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(135, 34);
+            this.btnSalir.Size = new System.Drawing.Size(135, 32);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "&SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
