@@ -46,7 +46,6 @@ namespace TPWinForm_equipo_2A
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             dgvCategorias.DataSource = negocio.Listar();
-            dgvCategorias.Columns["Id"].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

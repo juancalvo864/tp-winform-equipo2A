@@ -43,7 +43,6 @@ namespace TPWinForm_equipo_2A
         {
             MarcaNegocio negocio = new MarcaNegocio();
             dgvMarcas.DataSource = negocio.Listar();
-            dgvMarcas.Columns["Id"].Visible = false;
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)

@@ -50,7 +50,7 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(10, 37);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(183, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(183, 20);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
@@ -76,7 +76,7 @@
             this.lblCodigo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(10, 9);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(154, 23);
+            this.lblCodigo.Size = new System.Drawing.Size(123, 19);
             this.lblCodigo.TabIndex = 6;
             this.lblCodigo.Text = "Código / Nombre :";
             // 
@@ -86,7 +86,7 @@
             this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.Location = new System.Drawing.Point(239, 9);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(66, 23);
+            this.lblMarca.Size = new System.Drawing.Size(54, 19);
             this.lblMarca.TabIndex = 7;
             this.lblMarca.Text = "Marca :";
             // 
@@ -96,7 +96,7 @@
             this.lblCategoria.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(460, 9);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(93, 23);
+            this.lblCategoria.Size = new System.Drawing.Size(75, 19);
             this.lblCategoria.TabIndex = 8;
             this.lblCategoria.Text = "Categoría :";
             // 
@@ -106,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
+            this.label4.Size = new System.Drawing.Size(82, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Resultados :";
             // 
@@ -128,6 +128,7 @@
             // 
             // dgvResultados
             // 
+            this.dgvResultados.AllowUserToResizeRows = false;
             this.dgvResultados.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultados.Location = new System.Drawing.Point(10, 113);
@@ -145,7 +146,7 @@
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(239, 35);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(183, 24);
+            this.cbMarca.Size = new System.Drawing.Size(183, 21);
             this.cbMarca.TabIndex = 1;
             // 
             // cbCategoria
@@ -154,7 +155,7 @@
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(460, 35);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(183, 24);
+            this.cbCategoria.Size = new System.Drawing.Size(183, 21);
             this.cbCategoria.TabIndex = 2;
             // 
             // lblHelp
@@ -165,7 +166,7 @@
             this.lblHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblHelp.Location = new System.Drawing.Point(6, 365);
             this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(126, 20);
+            this.lblHelp.Size = new System.Drawing.Size(105, 17);
             this.lblHelp.TabIndex = 10;
             this.lblHelp.Text = "      Información";
             this.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
