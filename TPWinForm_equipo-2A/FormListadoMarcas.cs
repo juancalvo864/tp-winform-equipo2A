@@ -41,6 +41,7 @@ namespace TPWinForm_equipo_2A
 
         private void Cargar()
         {
+            dgvMarcas.RowHeadersVisible = false;
             MarcaNegocio negocio = new MarcaNegocio();
             dgvMarcas.DataSource = negocio.Listar();
             dgvMarcas.Columns["Id"].Visible = false;

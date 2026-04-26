@@ -33,9 +33,11 @@ namespace TPWinForm_equipo_2A
 
         private void FormListadoCat_Load(object sender, EventArgs e)
         {
+            dgvCategorias.RowHeadersVisible = false;
             Cargar();
             cboCampoCat.Items.Add("Descripcion");
             cboCampoCat.SelectedIndex = 0;
+            dgvCategorias.Columns["Id"].Visible = false;
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -46,7 +48,6 @@ namespace TPWinForm_equipo_2A
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             dgvCategorias.DataSource = negocio.Listar();
-            dgvCategorias.Columns["Id"].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

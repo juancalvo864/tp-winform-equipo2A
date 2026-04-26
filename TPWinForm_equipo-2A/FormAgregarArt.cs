@@ -260,5 +260,56 @@ namespace TPWinForm_equipo_2A
                 ? Path.GetFileName(rutasImagenesSeleccionadas[0])
                 : rutasImagenesSeleccionadas.Count + " imagenes seleccionadas";
         }
+
+        private void lblCodArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMarca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

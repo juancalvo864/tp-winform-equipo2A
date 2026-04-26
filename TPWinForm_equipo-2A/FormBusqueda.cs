@@ -113,5 +113,6 @@ namespace TPWinForm_equipo_2A
                 e.SuppressKeyPress = true;
             }
         }
+
     }
 }

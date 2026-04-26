@@ -48,8 +48,8 @@ namespace TPWinForm_equipo_2A
             dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.##";
             cboCampo.Items.Add("Código");
             cboCampo.Items.Add("Nombre");
-            cboCampo.SelectedIndex = 0; 
-
+            cboCampo.SelectedIndex = 0;
+            dgvArticulos.Columns["Id"].Visible = false;
 
 
         }
@@ -206,5 +206,6 @@ namespace TPWinForm_equipo_2A
           
 
         }
+
     }
 }
