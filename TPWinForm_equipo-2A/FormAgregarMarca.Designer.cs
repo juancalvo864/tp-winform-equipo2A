@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarMarca));
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -46,8 +47,8 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 37);
-            this.btnAgregar.TabIndex = 52;
-            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "&AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -63,42 +64,43 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 37);
-            this.btnCancelar.TabIndex = 53;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "&CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Window;
             this.txtDescripcion.Location = new System.Drawing.Point(11, 55);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(352, 26);
-            this.txtDescripcion.TabIndex = 51;
+            this.txtDescripcion.Size = new System.Drawing.Size(352, 22);
+            this.txtDescripcion.TabIndex = 1;
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(73, 25);
+            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(95, 25);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(232, 25);
-            this.lblMarca.TabIndex = 50;
-            this.lblMarca.Text = "INGRESAR NUEVA MARCA :";
+            this.lblMarca.Size = new System.Drawing.Size(184, 23);
+            this.lblMarca.TabIndex = 0;
+            this.lblMarca.Text = "Ingresar nueva marca :";
             // 
             // FormAgregarMarca
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(218)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(378, 150);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
