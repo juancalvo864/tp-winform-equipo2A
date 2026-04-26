@@ -201,5 +201,14 @@
   <ItemGroup>
     <None Include="Resources\filled-box-64.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-2-64-_1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
