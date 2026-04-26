@@ -1,4 +1,5 @@
-﻿using negocio;
+﻿using dominio;
+using negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,34 +14,198 @@ namespace TPWinForm_equipo_2A
 {
     public partial class FormListadoArt : Form
     {
+        private List<Articulo> listaArticulos;
+        List<String> urlsImagenes = new List<String>();
+
+        int indiceImagenActual = 0;
         public FormListadoArt()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregarArt formAgregarArt = new FormAgregarArt();
-            formAgregarArt.ShowDialog();
+            if (formAgregarArt.ShowDialog() == DialogResult.OK)
+                Cargar();
         }
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
-            FormDetalleArt formDetalles = new FormDetalleArt();
-            formDetalles.ShowDialog();
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FormDetalleArt formDetalles = new FormDetalleArt(seleccionado);
+                formDetalles.ShowDialog();
+            }
         }
 
         private void FormListadoArt_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();    
-            dgvArticulos.DataSource = negocio.Listar(); 
+            Cargar();
+            dgvArticulos.RowHeadersVisible = false;
+            dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.##";
+            cboCampo.Items.Add("Código");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.SelectedIndex = 0;
             dgvArticulos.Columns["Id"].Visible = false;
-            dgvArticulos.Columns["Imagen"].Visible = false;
+
+
         }
+
+        private void Cargar()
+        {
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            listaArticulos = artNegocio.Listar();
+            dgvArticulos.DataSource = listaArticulos;
+            dgvArticulos.Columns["Imagen"].Visible = false;           
+        }
+        private void CargarImagen(string imagen)
+        {
+            try
+            {
+                picbArtiuclos.Load(ImagenesHelper.ObtenerRutaCompleta(imagen));
+            }
+            catch (Exception)
+            {
+                picbArtiuclos.Image = TPWinForm_equipo_2A.Properties.Resources.placeholder;
+            }
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                ImagenNegocio imagenNegocio = new ImagenNegocio();
+                List<Imagen> imagenes = imagenNegocio.Listar(seleccionado.Id);
+
+                urlsImagenes = imagenes.Select(i => i.ImagenUrl).ToList();
+                indiceImagenActual = 0;
+
+                if (urlsImagenes.Count > 0)
+                    CargarImagen(urlsImagenes[0]);
+                else
+                    picbArtiuclos.Image = TPWinForm_equipo_2A.Properties.Resources.placeholder;
+
+                ActualizarVisibilidadBotones();
+            }
+        }
+
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            if (urlsImagenes.Count == 0) return;
+            indiceImagenActual = (indiceImagenActual - 1 + urlsImagenes.Count) % urlsImagenes.Count;
+            CargarImagen(urlsImagenes[indiceImagenActual]);
+            ActualizarVisibilidadBotones();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (urlsImagenes.Count == 0) return;
+
+            indiceImagenActual = (indiceImagenActual + 1) % urlsImagenes.Count;
+            CargarImagen(urlsImagenes[indiceImagenActual]);
+            ActualizarVisibilidadBotones();
+        }
+
+        private void ActualizarVisibilidadBotones()
+        {
+            bool hayVariasImagenes = urlsImagenes.Count > 1;
+            btnPrev.Enabled = hayVariasImagenes;
+            btnNext.Enabled = hayVariasImagenes;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvArticulos.CurrentRow == null)
+                {
+                    MessageBox.Show("Seleccioná un artículo primero.");
+                    return;
+                }
+
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;    
+
+                DialogResult respuesta = MessageBox.Show("¿Seguro que querés eliminar el artículo?","Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    negocio.Eliminar(articulo.Id);
+                    MessageBox.Show("Artículo eliminado correctamente.");
+                    Cargar(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Cargar(); 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado; 
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem; 
+
+            FormAgregarArt modificar = new FormAgregarArt(seleccionado);
+
+            if (modificar.ShowDialog() == DialogResult.OK)
+                Cargar();
+        }
+
+        private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();   
+            if(opcion == "Precio")
+            {
+                cboCriterio.Items.Clear();  
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();  
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();    
+            try
+            {
+                string campo = cboCampo.SelectedItem?.ToString();
+                string criterio = cboCriterio.SelectedItem?.ToString();
+                string filtro = txtFiltro.Text.Trim();
+
+                dgvArticulos.DataSource = negocio.Filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+          
+
+        }
+
     }
 }

@@ -16,17 +16,19 @@ namespace TPWinForm_equipo_2A
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void categoríasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            timer.Interval = 1000; 
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
         private void agregarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAgregarArt formAgregarArt = new FormAgregarArt();
-            formAgregarArt.ShowDialog();
+            if (formAgregarArt.ShowDialog() == DialogResult.OK)
+            {
+                FormListadoArt formListadoArt = new FormListadoArt();
+                formListadoArt.ShowDialog();
+            }
         }
 
         private void agregaMarcaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +72,11 @@ namespace TPWinForm_equipo_2A
         {
             FormBusqueda formBusqueda = new FormBusqueda();
             formBusqueda.ShowDialog();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            tsslFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
     }
 }
